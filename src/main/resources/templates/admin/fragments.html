@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!--头部样式-->
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width,initial-scale=1.0">
+    <title th:replace="${title}">首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}" />
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"/>
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{/css/main.css}"/>
+</head>
+<body>
+
+<!--导航-->
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-opacity-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">管理后台</h2>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==1}?'active'"><i class="home icon"></i>文章管理</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==2}?'active'"><i class="idea icon"></i>分类管理</a>
+            <a href="#" class="m-item item m-mobile-hide" th:classappend="${n==3}?'active'"><i class="tags icon"></i>标签管理</a>
+            <div class="right m-item item m-mobile-hide menu">
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img src="../../static/images/bg.jpg" alt="" class="ui avatar image" /> 张鑫
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+<!--底部样式-->
+<footer th:fragment="footer" class="ui inverted vertical segment  m-padded-tb-massive m-opacity-mini">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <div style="font-size: large;font-weight: bold"
+                             class="ui inverted header  m-text-thin m-text-spaced ">本站信息
+                        </div>
+                        <!--<p id="htmer_time" class="item m-text-thin"></p>-->
+                        <div id="blog-message">
+                            <div class="ui inverted link list">
+                                <div class="m-text-thin">
+                                    文章总数：
+                                    <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                        style="font-size:medium;"> 14 </h2> 篇
+                                </div>
+                                <div class="m-text-thin">
+                                    访问总数：
+                                    <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                        style="font-size:medium;"> 14 </h2> 次
+                                </div>
+                                <div class="m-text-thin">
+                                    评论总数：
+                                    <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                        style="font-size:medium;"> 14 </h2> 条
+                                </div>
+                                <div class="m-text-thin">
+                                    留言总数：
+                                    <h2 class="ui orange header m-inline-block m-margin-top-null"
+                                        style="font-size:medium;"> 14 </h2> 条
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="five wide column">
+                <h4 class="ui inverted header inverted header m-text-thin m-text-spaced">七律·长征</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">红军不怕远征难，万水千山只等闲。</a><br/>
+                    <a href="#" class="item">五岭逶迤腾细浪，乌蒙磅礴走泥丸。</a><br/>
+                    <a href="#" class="item">金沙水拍云崖暖，大渡桥横铁索寒。</a><br/>
+                    <a href="#" class="item">更喜岷山千里雪，三军过后尽开颜。</a>
+                </div>
+            </div>
+
+            <div class="three wide column">
+                <h4 class="ui inverted header inverted header m-text-thin m-text-spaced">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email: 3030036133@qq.com</a>
+                    <a href="#" class="item">QQ: 3030036133</a>
+                </div>
+            </div>
+            <div class="five wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">博客介绍</h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <div style="color: #F08047;margin-top: -18px" class="ui inverted m-text-thin m-text-spaced">我的博客已经运行：<span
+                id="htmer_time" class="item m-text-thin"></span></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2019-2020 Blog Designedn by ZhangXin</p>
+    </div>
+
+</footer>
+</body>
+</html>

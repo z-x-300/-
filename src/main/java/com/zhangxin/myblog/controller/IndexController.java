@@ -50,4 +50,9 @@ public class IndexController {
         return "about";
     }
 
+    @GetMapping("/blogs")
+    public String blogs(){
+        return "admin/blogs";
+    }
+
 }
