@@ -1,10 +1,347 @@
+<!--
+	作者：ZhangXin
+	时间：2020-07-20
+	描述：博客首页面
+-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments::head(~{::title})">
     <title>首页</title>
 </head>
+
 <body>
-<h1>首页</h1>
+<!--导航-->
+<nav th:replace="fragments::menu(1)"></nav>
+
+<!--中间内容-->
+<div class="m-container m-padded-tb-big m-opacity-mini">
+    <div class="ui container">
+        <div class="ui stackable grid">
+            <!--左边博客列表-->
+            <div class="eleven wide column">
+                <!--header  -->
+                <div class="ui top attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui blue header">博客</h3>
+                        </div>
+                        <div class="right aligned column">
+                            共
+                            <h2 class="ui orange header m-inline-block m-text-thin"> 14 </h2>篇
+                        </div>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="ui attached  segment">
+                    <div class="ui  padded typo typo-selection vertical segment m-padded-tb-large">
+                        <div class="ui mobile reversed stackable grid">
+                            <div class="ten wide column">
+                                <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
+                                <p class="m-text">Spring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework
+                                    5.0 开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
+                                </p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <img th:src="@{/images/001.jpg}" src="../static/images/001.jpg" alt=""
+                                                     class="ui avatar image"/>
+                                                <div class="content">
+                                                    <a href="#" class="header">ZhangXin</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-07-20
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>1234
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right attached five wide column">
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-mini m-text-thin">
+                                            SpringBoot
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="six wide column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/001.jpg" th:src="@{/images/001.jpg}" alt=""
+                                         class="ui rounded image"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui  padded typo typo-selection vertical segment m-padded-tb-large">
+                        <div class="ui mobile reversed stackable grid">
+                            <div class="ten wide column">
+                                <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
+                                <p class="m-text">Spring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework
+                                    5.0 开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
+                                </p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <img th:src="@{/images/001.jpg}" src="../static/images/001.jpg" alt=""
+                                                     class="ui avatar image"/>
+                                                <div class="content">
+                                                    <a href="#" class="header">ZhangXin</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-07-20
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>1234
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right attached five wide column">
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-mini m-text-thin">
+                                            SpringBoot
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="six wide column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/001.jpg" th:src="@{/images/001.jpg}" alt=""
+                                         class="ui rounded image"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui  padded typo typo-selection vertical segment m-padded-tb-large">
+                        <div class="ui mobile reversed stackable grid">
+                            <div class="ten wide column">
+                                <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
+                                <p class="m-text">Spring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework
+                                    5.0 开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
+                                </p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+                                        <div class="ui mini horizontal link list">
+                                            <div class="item">
+                                                <img th:src="@{/images/001.jpg}" src="../static/images/001.jpg" alt=""
+                                                     class="ui avatar image"/>
+                                                <div class="content">
+                                                    <a href="#" class="header">ZhangXin</a>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <i class="calendar icon"></i>2020-07-20
+                                            </div>
+                                            <div class="item">
+                                                <i class="eye icon"></i>1234
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="right attached five wide column">
+                                        <a href="#" target="_blank"
+                                           class="ui teal basic label m-padded-mini m-text-thin">
+                                            SpringBoot
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="six wide column">
+                                <a href="#" target="_blank">
+                                    <img src="../static/images/001.jpg" th:src="@{/images/001.jpg}" alt=""
+                                         class="ui rounded image"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer-->
+                <div class="ui bottom attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <a href="#" class="ui mini blue basic button">上一页</a>
+                        </div>
+                        <div class="right aligned column">
+                            <a href="#" class="ui mini blue basic button">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--右边top-->
+            <div class="five wide column">
+                <!--分类 -->
+                <div class="ui segments">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>分类
+                            </div>
+                            <div class="right aligned column">
+                                <a href="">more<i class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui blue segment">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" class="item">
+                                Java 基础
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                Java 进阶
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                Java 基础
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                Java 基础
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                Java 基础
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" class="item">
+                                Java 基础
+                                <div class="ui  blue basic left pointing label">13</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--标签 -->
+                <div class="ui segments">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="tags icon"></i>标签
+                            </div>
+                            <div class="right aligned column">
+                                <a href="">more<i class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui blue segment">
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label m-margin-tb-tiny">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                        <a href="#" target="_blank" class="ui  blue basic left pointing label">
+                            框架
+                            <div class="detail">23</div>
+                        </a>
+                    </div>
+                </div>
+                <!--最新推荐 -->
+                <div class="ui segments">
+                    <div class="ui secondary segment">
+                        <div class="column">
+                            <i class="bookmark icon"></i>最新推荐
+                        </div>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class=" m-black m-text-thin">SpringBoot快速入门</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class=" m-black m-text-thin">SpringBoot快速入门</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class=" m-black m-text-thin">SpringBoot快速入门</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class=" m-black m-text-thin">SpringBoot快速入门</a>
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank" class=" m-black ">SpringBoot快速入门</a>
+                    </div>
+                </div>
+                <!--二维码 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部内容-->
+<footer th:replace="fragments::footer"></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide')
+    })
+
+    // 运行时间统计
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }
+
+    function setTime() {
+        /*此处为网站的创建时间*/
+        var create_time = Math.round(new Date(Date.UTC(2020, 05, 50, 15, 15, 15)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天' +
+            currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4] +
+            '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }
+
+    setInterval(setTime, 1000);
+
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-show');
+
+    });
+</script>
 </body>
+
 </html>
