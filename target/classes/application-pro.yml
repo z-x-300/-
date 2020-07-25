@@ -1,0 +1,23 @@
+#生产环境配置
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/myblog?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+logging:
+  level:
+    root: warn
+    com.zhangxin.myblog: debug
+  file:
+    path: F:\自学\项目\项目三\后端\log
+    name: myblog-info.log
+
+server:
+  port: 8088
