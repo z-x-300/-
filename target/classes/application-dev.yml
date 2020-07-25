@@ -16,5 +16,4 @@ logging:
     root: info
     com.zhangxin.myblog: debug
   file:
-    path: F:/自学/项目/项目三/后端/log
     name: myblog-dev.log
