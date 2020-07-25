@@ -28,11 +28,11 @@
             <div class="right m-item item m-mobile-hide menu">
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/images/bg.jpg" alt="" class="ui avatar image" /> 张鑫
+                        <img src="../../static/images/bg.jpg" th:src="@{/images/bg.jpg}" alt="" class="ui avatar image" /> 张鑫
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="#" class="item">注销</a>
+                        <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
                     </div>
                 </div>
             </div>
