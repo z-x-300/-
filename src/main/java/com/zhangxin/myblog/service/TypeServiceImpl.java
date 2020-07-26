@@ -10,6 +10,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * @author zhangxin
  * @date 2020/7/26
@@ -46,6 +48,14 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public Page<Type> listType(Pageable pageable) {
         return typeRepository.findAll(pageable);
+    }
+
+
+    //查询所有分类(不分页)
+    @Transactional
+    @Override
+    public List<Type> listType() {
+        return typeRepository.findAll();
     }
 
     //修改分类
