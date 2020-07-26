@@ -1,4 +1,4 @@
-package com.zhangxin.myblog.controller;
+package com.zhangxin.myblog.controller.admin;
 
 import com.zhangxin.myblog.po.User;
 import com.zhangxin.myblog.service.UserService;

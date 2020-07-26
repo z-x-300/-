@@ -10,13 +10,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @date 2020/7/25
  */
 
+//配置类
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
 
-//    @Override
-//    public void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/**")
-//                .excludePathPatterns("/index.html","/","/user/login","/css/**","/js/**","/images/**");
-//    }
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/admin/**")
+                .excludePathPatterns("/admin", "/", "/admin/login");
+    }
 }

@@ -2,6 +2,7 @@ package com.zhangxin.myblog.service;
 
 import com.zhangxin.myblog.dao.UserRepository;
 import com.zhangxin.myblog.po.User;
+import com.zhangxin.myblog.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ public class UserServiceImpl implements UserService {
     //确认用户（登录使用）
     @Override
     public User checkUser(String username, String password) {
-        User user =userRepository.findByUsernameAndPassword(username,password);
+        User user =userRepository.findByUsernameAndPassword(username, MD5Utils.code(password));
         return user;
     }
 }
