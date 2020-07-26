@@ -17,51 +17,58 @@
 		<!--中间内容-->
 		<div class="m-container-mini m-padded-tb-big ">
 			<div class="ui container">
-				<div class="ui success message">
+				<div class="ui success message" th:unless="${#strings.isEmpty(successMessage)}">
 					<i class="close icon"></i>
-					<div class="">提示：操作成功！</div>
+					<div class="" th:text="${successMessage}">提示：操作成功！</div>
 				</div>
-				<table class="ui compact teal table">
+				<div class="ui negative message" th:unless="${#strings.isEmpty(errorMessage)}">
+					<i class="close icon"></i>
+					<div class="" th:text="${errorMessage}">提示：操作失败！</div>
+				</div>
+				<table class="ui compact teal table" >
 					<thead>
-						<tr align="center">
-							<th>ID</th>
-							<th>名称</th>
-							<th>操作</th>
-						</tr>
+					<tr>
+						<th colspan="6"><h2 class="ui teal header" style="text-align: center">博客标签列表</h2></th>
+					</tr>
+					<tr align="center">
+						<th></th>
+						<th>名称</th>
+						<th>操作</th>
+					</tr>
 					</thead>
 					<tbody>
-						<tr align="center">
-							<td>1</td>
-							<td>Java</td>
-							<td>
-								<a href="#" class="ui mini teal basic button">编辑</a>
-								<a href="#" onclick="return confirm('确定要删除该标签吗？三思啊! 删了可就没了！')" class="ui mini red basic button">删除</a>
-							</td>
-						</tr>
+					<tr align="center" th:each="tag,iterStat:${page.content}">
+						<td th:text="${iterStat.count}">1</td>
+						<td th:text="${tag.name}">我的故事</td>
+						<td>
+							<button type="button"  href="#" class="ui updateBtn mini teal basic button" th:data-id= "${tag.id}"  onclick="editType(this.getAttribute('data-id'))">编辑</button>
+							<a href="#" onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button">删除</a>
+						</td>
+					</tr>
 					</tbody>
 					<tfoot>
-						<tr>
-							<th colspan="6">
-								<div class="ui inverted divided stackable grid">
-									<div class="three wide column" align="center">
-										<a class="item">上一页</a>
-									</div>
-
-									<div class="ten wide column" align="center">
-										<p>第 <span></span> 页，共 <span></span> 页，有 <span></span>个 标签</p>
-									</div>
-
-									<div class="three wide column" align="center">
-										<a class="item">下一页</a>
-									</div>
+					<tr>
+						<th colspan="6" >
+							<div class="ui inverted divided stackable grid">
+								<div class="three wide column" align="center">
+									<a class="item" th:href="@{/admin/tags(page=${page.number}-1)}" th:unless="${page.first}">上一页</a>
 								</div>
-								<div align="center">
-									<a href="#">
-										<button id="addBtn" type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
-									</a>
+
+								<div class="ten wide column" align="center">
+									<p>第 <span>[[${page.number}+1]]</span> 页，共 <span>[[${page.totalPages}]]</span> 页，有 <span>[[${page.totalElements}]]</span> 个分类</p>
 								</div>
-							</th>
-						</tr>
+
+								<div class="three wide column" align="center">
+									<a class="item" th:href="@{/admin/tags(page=${page.number}+1)}" th:unless="${page.last}">下一页</a>
+								</div>
+							</div>
+							<div align="center">
+								<a href="#">
+									<button id="addBtn" type="button" class="ui teal button m-mobile-wide m-margin-top"><i class="pencil icon"></i>新增</button>
+								</a>
+							</div>
+						</th>
+					</tr>
 					</tfoot>
 				</table>
 			</div>
