@@ -42,7 +42,7 @@
 						<td th:text="${tag.name}">我的故事</td>
 						<td>
 							<button type="button"  href="#" class="ui updateBtn mini teal basic button" th:data-id= "${tag.id}"  onclick="editType(this.getAttribute('data-id'))">编辑</button>
-							<a href="#" onclick="return confirm('确定要删除该分类吗？三思啊! 删了可就没了！')" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button">删除</a>
+							<a href="#" onclick="return confirm('确定要删除该标签吗？三思啊! 删了可就没了！')" th:href="@{/admin/tags/{id}/delete(id=${tag.id})}" class="ui mini red basic button">删除</a>
 						</td>
 					</tr>
 					</tbody>
@@ -74,9 +74,9 @@
 			</div>
 			<!--添加标签-->
 			<div class="ui container">
-				<div class="ui small modal" style="height: 400px;">
+				<div class="ui small add modal" style="height: 400px;">
 					<h2 class="ui teal header" style="text-align: center;">添加标签</h1>
-					<form action="#" method="post" class="ui form">
+					<form action="#" method="post" th:action="@{/admin/tags}"class="ui form">
 						<input type="hidden" name="id">
 						<div class=" field  m-padded-tb-big m-padded" >
 							<div class="ui left labeled input">
@@ -84,14 +84,35 @@
 								<input type="text" name="name" placeholder="标签名称">
 							</div>
 						</div>
-						<div class="ui error message"></div>
-						<div class="ui mini negative message">提示：不能添加重复的标签</div>
 						<div class="ui center aligned container actions">
 							<button class="ui teal submit button">提交</button>
 							<button type="button" class="ui cancel red button">取消</button>
 						</div>
 					</form>
 				</div>
+
+				<!--修改标签-->
+				<div class="ui container">
+					<div class="ui small update modal" style="height: 400px;">
+						<h2 class="ui teal header" style="text-align: center;">修改标签</h2>
+						<form action="#" th:action="@{/admin/tags}"  method="post" class="ui form">
+							<input type="hidden" name="_method" value="put" />
+							<input type="hidden" name="id" id="tag_id">
+							<div class=" field  m-padded-tb-big m-padded" >
+								<div class="ui left labeled input">
+									<label class="ui teal basic label">名称</label>
+									<input type="text" id="tag_name" name="name" placeholder="标签名称" >
+								</div>
+							</div>
+							<div class="ui error message" ></div>
+							<div class="ui center aligned container actions">
+								<button class="ui teal submit button">提交</button>
+								<button type="button" class="ui cancel red button">取消</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
 			</div>
 
 		</div>
@@ -122,9 +143,16 @@
 
 			$(function() {
 				$("#addBtn").on("click", function() {
-					$(".ui.modal").modal("show");
+					$(".ui.add.modal").modal("show");
 				})
 			});
+
+			$(function() {
+				$(".updateBtn").on("click", function() {
+					$(".ui.update.modal").modal("show");
+				})
+			});
+
 
 			$('.ui.form').form({
 				fields: {
@@ -145,6 +173,24 @@
 						.closest('.message')
 						.transition('fade');
 				});
+
+			//获取修改标签的名称
+			function editType(id) {
+				$.ajax({
+					type:"post",
+					url:"/admin/tags/input",
+					data:{"id":id},
+					//dataType:"json",
+					success:function(data) {
+						var arr= new Array(); //定义一数组
+						arr =data.split("|");
+						//alert(arr[0]);
+						$("#tag_id").val(arr[0]);
+						$("#tag_name").val(arr[1]);
+
+					}
+				});
+			}
 		</script>
 	</body>
 

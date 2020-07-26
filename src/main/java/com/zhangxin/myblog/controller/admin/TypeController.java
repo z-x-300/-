@@ -41,8 +41,7 @@ public class TypeController {
     public String updateInput(Long id){
        // model.addAttribute("type",typeService.getType(id));
         Type type =typeService.getType(id);
-        String n=type.getId()+"|"+type.getName();
-        return n;
+        return type.getId()+"|"+type.getName();
     }
 
     //添加分类
