@@ -8,9 +8,13 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
  * @author zhangxin
@@ -32,22 +36,29 @@ public class TypeController {
         return "/admin/types";
     }
 
-//    @GetMapping("/types/input")
-//    public String input(){
-//        return
-//    }
 
+    @ResponseBody
+    @PostMapping("/types/input")
+    public String editInput(Long id){
+       // model.addAttribute("type",typeService.getType(id));
+        Type type =typeService.getType(id);
+        return type.getName();
+    }
     @PostMapping("/types")
-    public String post(Type type){
+    public String post( Type type, RedirectAttributes attributes){
 
-        Type type1 = typeService.saveType(type);
-
-        if (type1==null){
-
+        Type type0 = typeService.getTypeByName(type.getName());
+        if (type0!=null) {
+            attributes.addFlashAttribute("errorMessage", "提示：操作失败！,添加的分类不能重复！");
         }else {
+            Type type1 = typeService.saveType(type);
 
+            if (type1 == null) {
+                attributes.addFlashAttribute("errorMessage", "提示：操作失败！");
+            } else {
+                attributes.addFlashAttribute("successMessage", "提示：操作成功！");
+            }
         }
-
         return "redirect:/admin/types";
     }
 }

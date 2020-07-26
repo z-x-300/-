@@ -34,6 +34,13 @@ public class TypeServiceImpl implements TypeService {
         return typeRepository.getOne(id);
     }
 
+    //根据名称查询分类
+    @Transactional
+    @Override
+    public Type getTypeByName(String name) {
+        return typeRepository.findByName(name);
+    }
+
     //查询所有分类
     @Transactional
     @Override

@@ -1,6 +1,7 @@
 package com.zhangxin.myblog.po;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class Type {
     @GeneratedValue
     private Long id;//类别id
 
+    @NotBlank(message = "分类名称不能为空")
     private String name;//类别名称
 
     @OneToMany(mappedBy="type")//被维护端
