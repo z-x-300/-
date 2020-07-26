@@ -25,7 +25,7 @@
 					<i class="close icon"></i>
 					<div class="" th:text="${errorMessage}">提示：操作失败！</div>
 				</div>
-				<table class="ui compact teal table">
+				<table class="ui compact teal table" >
 					<thead>
 					<tr>
 						<th colspan="6"><h2 class="ui teal header" style="text-align: center">分类列表</h2></th>
@@ -98,7 +98,8 @@
 				<div class="ui small update modal" style="height: 400px;">
 					<h2 class="ui teal header" style="text-align: center;">修改分类</h2>
 					<form action="#" th:action="@{/admin/types}"  method="post" class="ui form">
-						<input type="hidden" name="id">
+						<input type="hidden" name="_method" value="put" />
+						<input type="hidden" name="id" id="type_id">
 						<div class=" field  m-padded-tb-big m-padded" >
 							<div class="ui left labeled input">
 								<label class="ui teal basic label">名称</label>
@@ -180,9 +181,14 @@
 					type:"post",
 					url:"/admin/types/input",
 					data:{"id":id},
-					dataType:"html",
+					//dataType:"json",
 					success:function(data) {
-						$("#type_name").val(data);
+						var arr= new Array(); //定义一数组
+						arr =data.split("|");
+						//alert(arr[0]);
+						$("#type_id").val(arr[0]);
+						$("#type_name").val(arr[1]);
+
 					}
 				});
 			}

@@ -10,11 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.util.List;
 
 /**
  * @author zhangxin
@@ -36,20 +35,23 @@ public class TypeController {
         return "/admin/types";
     }
 
-
+   //获取修改分类的信息
     @ResponseBody
     @PostMapping("/types/input")
-    public String editInput(Long id){
+    public String updateInput(Long id){
        // model.addAttribute("type",typeService.getType(id));
         Type type =typeService.getType(id);
-        return type.getName();
+        String n=type.getId()+"|"+type.getName();
+        return n;
     }
+
+    //添加分类
     @PostMapping("/types")
-    public String post( Type type, RedirectAttributes attributes){
+    public String add( Type type, RedirectAttributes attributes){
 
         Type type0 = typeService.getTypeByName(type.getName());
         if (type0!=null) {
-            attributes.addFlashAttribute("errorMessage", "提示：操作失败！,添加的分类不能重复！");
+            attributes.addFlashAttribute("errorMessage", "提示：操作失败！,分类不能重复！");
         }else {
             Type type1 = typeService.saveType(type);
 
@@ -59,6 +61,33 @@ public class TypeController {
                 attributes.addFlashAttribute("successMessage", "提示：操作成功！");
             }
         }
+        return "redirect:/admin/types";
+    }
+
+    //修改分类
+    @PutMapping("/types")
+    public String  update( Type type, RedirectAttributes attributes){
+
+        Type type0 = typeService.getTypeByName(type.getName());
+        if (type0!=null) {
+            attributes.addFlashAttribute("errorMessage", "提示：操作失败！,分类不能重复！");
+        }else {
+            Type type1 = typeService.updateType(type.getId(),type);
+
+            if (type1 == null) {
+                attributes.addFlashAttribute("errorMessage", "提示：操作失败！");
+            } else {
+                attributes.addFlashAttribute("successMessage", "提示：操作成功！");
+            }
+        }
+        return "redirect:/admin/types";
+    }
+
+    //删除分类
+    @GetMapping("/types/{id}/delete")
+    public String delete(@PathVariable Long id ,RedirectAttributes attributes){
+        typeService.deleteType(id);
+        attributes.addFlashAttribute("successMessage", "提示：删除成功！");
         return "redirect:/admin/types";
     }
 }
