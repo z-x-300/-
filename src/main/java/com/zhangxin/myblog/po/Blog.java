@@ -60,6 +60,9 @@ public class Blog {
     @Transient
     private String tagIds;//标签一系列id
 
+    //博客描述
+    private String description;
+
     public Blog() {
     }
 
@@ -207,6 +210,14 @@ public class Blog {
         this.tagIds = tagIds;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     //把获取的标签字符串赋值到tagIds
     public void init() {
         this.tagIds = tagsToIds(this.getTags());
@@ -247,6 +258,12 @@ public class Blog {
                 ", recommend=" + recommend +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

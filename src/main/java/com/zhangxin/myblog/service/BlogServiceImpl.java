@@ -5,6 +5,7 @@ import com.zhangxin.myblog.dao.BlogRepository;
 import com.zhangxin.myblog.handler.NotFoundException;
 import com.zhangxin.myblog.po.Blog;
 import com.zhangxin.myblog.po.Type;
+import com.zhangxin.myblog.util.MyBeanUtils;
 import com.zhangxin.myblog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,9 +83,7 @@ public class BlogServiceImpl implements BlogService {
         if (blog1==null){
             throw new NotFoundException("该博客不存在！");
         }
-        blog.setViews(blog1.getViews());
-        blog.setCreateTime(blog1.getCreateTime());
-        BeanUtils.copyProperties(blog,blog1);
+        BeanUtils.copyProperties(blog,blog1, MyBeanUtils.getNullPropertyNames(blog));
         blog1.setUpdateTime(new Date());
         return blogRepository.save(blog1);
     }
