@@ -81,7 +81,7 @@
 							<td th:text="${blog.type.name}">认知升级</td>
 							<td th:text="${blog.recommend} ? '是':'否'">是</td>
 							<td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
-							<td th:text="${blog.updateTime}">2017-10-02 09:45</td>
+							<td th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2017-10-02 09:45</td>
 							<td>
 								<a href="#" class="ui mini teal basic button" th:href="@{/admin/blogs/{id}/input(id=${blog.id})}">编辑</a>
 								<a href="#" onclick="return confirm('确定要删除该文章吗？')" class="ui mini red basic button" th:href="@{/admin/blogs/{id}/delete(id=${blog.id})}">删除</a>
@@ -93,7 +93,7 @@
 							<th colspan="7">
 								<div class="ui inverted divided stackable grid">
 									<div class="three wide column" align="center">
-										<a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
+										<a onclick="page(this)" th:attr="data-page=${page.number}-1" class="ui mini teal basic button item" th:unless="${page.first}">上一页</a>
 									</div>
 
 									<div class="ten wide column" align="center">
@@ -101,7 +101,7 @@
 									</div>
 
 									<div class="three wide column" align="center">
-										<a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
+										<a onclick="page(this)" th:attr="data-page=${page.number}+1" class="ui mini teal basic button item" th:unless="${page.last}">下一页</a>
 									</div>
 								</div>
 								<div align="center">

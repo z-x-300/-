@@ -30,6 +30,9 @@ public interface TagService {
     //根据一系列id获取标签
     List<Tag> listTag(String ids);
 
+    //获取具体数量的标签
+    List<Tag> listTagTop(Integer size);
+
     //修改标签
     Tag updateTag(Long id,Tag tag);
 

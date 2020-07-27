@@ -27,6 +27,9 @@ public interface TypeService {
     //返回所有分类（不分页）
     List<Type> listType();
 
+    //获取具体数量的分类
+    List<Type> listTypeTop(Integer size);
+
     //修改分类
     Type updateType(Long id,Type type);
 

@@ -51,7 +51,7 @@
 						<th colspan="6" >
 							<div class="ui inverted divided stackable grid">
 								<div class="three wide column" align="center">
-									<a class="item" th:href="@{/admin/tags(page=${page.number}-1)}" th:unless="${page.first}">上一页</a>
+									<a class="ui mini teal basic button item" th:href="@{/admin/tags(page=${page.number}-1)}" th:unless="${page.first}">上一页</a>
 								</div>
 
 								<div class="ten wide column" align="center">
@@ -59,7 +59,7 @@
 								</div>
 
 								<div class="three wide column" align="center">
-									<a class="item" th:href="@{/admin/tags(page=${page.number}+1)}" th:unless="${page.last}">下一页</a>
+									<a class="ui mini teal basic button item" th:href="@{/admin/tags(page=${page.number}+1)}" th:unless="${page.last}">下一页</a>
 								</div>
 							</div>
 							<div align="center">

@@ -5,6 +5,8 @@ import com.zhangxin.myblog.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 
 /**
  * @author zhangxin
@@ -17,6 +19,12 @@ public interface BlogService {
 
     //动态获取博客列表
     Page<Blog> listBlog(Pageable pageable, BlogQuery blogQuery);
+
+    //获取博客列表
+    Page<Blog> listBlog(Pageable pageable);
+
+    //获取具体数量的推荐博客
+    List<Blog> listRecommendBlogTop(Integer size);
 
     //添加博客
     Blog saveBlog(Blog blog);
