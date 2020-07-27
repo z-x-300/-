@@ -10,6 +10,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author zhangxin
  * @date 2020/7/26
@@ -30,7 +33,6 @@ public class TagServiceImpl implements TagService {
 
 
     //根据id获取标签
-    @Transactional
     @Override
     public Tag getTag(Long id) {
         return tagRepository.getOne(id);
@@ -38,7 +40,6 @@ public class TagServiceImpl implements TagService {
 
 
     //根据名称获取标签
-    @Transactional
     @Override
     public Tag getTagByName(String name) {
         return tagRepository.findByName(name);
@@ -46,13 +47,35 @@ public class TagServiceImpl implements TagService {
 
 
     //获取所有标签
-    @Transactional
     @Override
     public Page<Tag> listTag(Pageable pageable) {
         return tagRepository.findAll(pageable);
     }
 
+    //获取所有标签(不分页）
+    @Override
+    public List<Tag> listTag() {
+        return tagRepository.findAll();
+    }
 
+    //根据一系列id获取标签
+    @Override
+    public List<Tag> listTag(String ids) {
+        return tagRepository.findAllById(convertToList(ids));
+    }
+
+    //把字符串转换为list<Long>
+    private  List<Long> convertToList(String ids){
+        List<Long> list  =new ArrayList<>();
+        if (!"".equals(ids)&&ids!=null){
+            String [] idarray =ids.split(",");
+            for (int i=0;i<idarray.length;i++){
+                list.add(new Long(idarray[i]));
+            }
+        }
+
+        return list;
+    }
 
     //更新标签
     @Transactional

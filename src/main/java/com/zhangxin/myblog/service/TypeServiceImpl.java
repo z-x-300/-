@@ -30,21 +30,18 @@ public class TypeServiceImpl implements TypeService {
     }
 
     //根据id查询分类
-    @Transactional
     @Override
     public Type getType(Long id) {
         return typeRepository.getOne(id);
     }
 
     //根据名称查询分类
-    @Transactional
     @Override
     public Type getTypeByName(String name) {
         return typeRepository.findByName(name);
     }
 
     //查询所有分类
-    @Transactional
     @Override
     public Page<Type> listType(Pageable pageable) {
         return typeRepository.findAll(pageable);
@@ -52,7 +49,6 @@ public class TypeServiceImpl implements TypeService {
 
 
     //查询所有分类(不分页)
-    @Transactional
     @Override
     public List<Type> listType() {
         return typeRepository.findAll();

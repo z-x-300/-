@@ -12,12 +12,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -60,12 +62,20 @@ public class BlogServiceImpl implements BlogService {
 
 
     //添加博客
+    @Transactional
     @Override
     public Blog saveBlog(Blog blog) {
+        //初始化创建日期
+        blog.setCreateTime(new Date());
+        //初始化修改日期
+        blog.setUpdateTime(new Date());
+        //初始化浏览次数
+        blog.setViews(0);
         return blogRepository.save(blog);
     }
 
     //修改博客
+    @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
         Blog blog1 =blogRepository.getOne(id);
@@ -77,6 +87,7 @@ public class BlogServiceImpl implements BlogService {
     }
 
     //删除博客
+    @Transactional
     @Override
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);

@@ -4,6 +4,8 @@ import com.zhangxin.myblog.po.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * @author zhangxin
  * @date 2020/7/26
@@ -21,6 +23,12 @@ public interface TagService {
 
     //查询所有标签
     Page<Tag> listTag(Pageable pageable);
+
+    //查询所有标签（不分页）
+    List<Tag> listTag();
+
+    //根据一系列id获取标签
+    List<Tag> listTag(String ids);
 
     //修改标签
     Tag updateTag(Long id,Tag tag);
