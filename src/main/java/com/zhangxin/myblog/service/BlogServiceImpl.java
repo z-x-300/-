@@ -49,7 +49,7 @@ public class BlogServiceImpl implements BlogService {
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicates = new ArrayList<>();
                 if (!"".equals(blogQuery.getTitle()) && blogQuery.getTitle() != null) {
-                    predicates.add(cb.like(root.<String>get("title"), "%"+blogQuery.getTitle()+"%"));
+                    predicates.add(cb.like(root.<String>get("title"), "%" + blogQuery.getTitle() + "%"));
                 }
                 if (blogQuery.getTypeId() != null) {
                     predicates.add(cb.equal(root.<Type>get("type").get("id"), blogQuery.getTypeId()));
@@ -60,7 +60,7 @@ public class BlogServiceImpl implements BlogService {
                 cq.where(predicates.toArray(new Predicate[predicates.size()]));
                 return null;
             }
-        },pageable);
+        }, pageable);
     }
 
     //获取博客列表
@@ -69,11 +69,23 @@ public class BlogServiceImpl implements BlogService {
         return blogRepository.findAll(pageable);
     }
 
+    //获取发布博客列表
+    @Override
+    public Page<Blog> listPublishedBlog(Pageable pageable) {
+        return blogRepository.findAllPublished(pageable);
+    }
+
     //获取具体数量的推荐博客
     @Override
     public List<Blog> listRecommendBlogTop(Integer size) {
-        Pageable pageable = PageRequest.of(0,size, Sort.by(Sort.Direction.DESC,"updateTime"));
+        Pageable pageable = PageRequest.of(0, size, Sort.by(Sort.Direction.DESC, "updateTime"));
         return blogRepository.findTop(pageable);
+    }
+
+    //搜索博客
+    @Override
+    public Page<Blog> listBlog(String query, Pageable pageable) {
+        return blogRepository.findByQuery(query, pageable);
     }
 
 
@@ -94,11 +106,11 @@ public class BlogServiceImpl implements BlogService {
     @Transactional
     @Override
     public Blog updateBlog(Long id, Blog blog) {
-        Blog blog1 =blogRepository.getOne(id);
-        if (blog1==null){
+        Blog blog1 = blogRepository.getOne(id);
+        if (blog1 == null) {
             throw new NotFoundException("该博客不存在！");
         }
-        BeanUtils.copyProperties(blog,blog1, MyBeanUtils.getNullPropertyNames(blog));
+        BeanUtils.copyProperties(blog, blog1, MyBeanUtils.getNullPropertyNames(blog));
         blog1.setUpdateTime(new Date());
         return blogRepository.save(blog1);
     }

@@ -23,8 +23,14 @@ public interface BlogService {
     //获取博客列表
     Page<Blog> listBlog(Pageable pageable);
 
+    //获取发布博客列表
+    Page<Blog> listPublishedBlog(Pageable pageable);
+
     //获取具体数量的推荐博客
     List<Blog> listRecommendBlogTop(Integer size);
+
+    //搜索博客
+    Page<Blog> listBlog(String query,Pageable pageable);
 
     //添加博客
     Blog saveBlog(Blog blog);

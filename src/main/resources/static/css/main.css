@@ -7,6 +7,11 @@ body{
     width: 100%;
     background-position: 0px 1050px;
 }
+.m-bg{
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
 .m-padded-mini {
     padding: 0.2em !important;
 }
@@ -73,17 +78,52 @@ body{
 .m-text-thin {
     font-weight: 300 !important;
 }
-
 .m-text-spaced {
     letter-spacing: 1px !important;
 }
-
 .m-text-lined {
     line-height: 1.8;
 }
 
-.m-opacity-mini{
-	opacity: 0.8 !important;
+.m-font-size-title-large{
+    font-size: 30px;
+    color: #ffffff;
+    font-family: STSong;
+}
+
+.m-font-size-title{
+    font-size: 400%;
+    color: #ffffff;
+}
+
+.m-font-size-text{
+    font-size: 26px;
+    color: #ffffff;
+    font-family: STXihei;
+}
+
+.m-font-size-blog-text{
+    font-size: 18px;
+    color: #ffffff;
+    font-family: STSong;
+}
+
+.m-font-size-text-friends{
+    font-size: 16px;
+    color: #000000;
+    font-family: STSong;
+}
+
+.m-font-size-text-mini{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.m-font-size-text-init-title{
+    font-size: 24px;
+    color: #fffffc;
+    align-content: center;
+    font-family:'STXingkai';
 }
 
 /*------display------*/
@@ -178,6 +218,12 @@ body{
    display: none !important;
 }
 
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+
 @media screen and (max-width: 768px){
     .m-mobile-hide {
         display: none !important;
@@ -196,19 +242,6 @@ body{
     .m-mobile-wide {
         width: 100% !important;
     }
-}
-
-/*------position---*/
-
-.m-right-top {
-    position: absolute;
-    top:0;
-    right: 0;
-}
-.m-left-top {
-    position: absolute;
-    top:0;
-    left: 0;
 }
 
 
@@ -247,6 +280,16 @@ body{
 }
 
 /*------positon-----*/
+.m-right-top {
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.m-left-top {
+    position: absolute;
+    top:0;
+    left: 0;
+}
 
 .m-fixed {
     position: fixed !important;
@@ -256,4 +299,45 @@ body{
 .m-right-bottom {
     bottom: 0 !important;
     right: 0 !important;
+}
+
+
+.m-bg-class_outer {
+    display: block;
+    /*width: 550px;*/
+    /*height: 276px;*/
+    /*margin: 10px auto 0 0;*/
+    position: relative;
+    overflow: hidden;
+}
+
+.m-bg-type_outer {
+    display: block;
+    /*margin: 10px auto 0 0;*/
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.m-bg-class_cover {
+    width: 100%;
+    height: 750px;
+    line-height: 50px;
+    padding-left: 6px;
+    background-color: rgba(0, 0, 0, .60);
+    /*color: #FFFFFF;*/
+    /*font-size: 26px;*/
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+
+.m-picture-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size:large;
+    font-family: '_GB2312 FangSong_GB2312';
 }
