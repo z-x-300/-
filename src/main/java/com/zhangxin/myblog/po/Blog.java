@@ -12,7 +12,7 @@ import java.util.List;
 
 //博客实体类
 @Entity
-@Table(name="blog")
+@Table(name = "blog")
 public class Blog {
 
     @Id
@@ -55,7 +55,7 @@ public class Blog {
     private User user;//博客作者
 
     @OneToMany(mappedBy = "blog")
-    private List<Comment>comments =new ArrayList<>();//博客评论
+    private List<Comment> comments = new ArrayList<>();//博客评论
 
     @Transient
     private String tagIds;//标签一系列id
@@ -205,6 +205,30 @@ public class Blog {
 
     public void setTagIds(String tagIds) {
         this.tagIds = tagIds;
+    }
+
+    //把获取的标签字符串赋值到tagIds
+    public void init() {
+        this.tagIds = tagsToIds(this.getTags());
+    }
+
+    //把数据库的标签id转换成字符串，如：1，2，3
+    private String tagsToIds(List<Tag> tags) {
+        if (!tags.isEmpty()) {
+            StringBuffer ids = new StringBuffer();
+            boolean flag = false;
+            for (Tag tag : tags) {
+                if (flag) {
+                    ids.append(",");
+                } else {
+                    flag = true;
+                }
+                ids.append(tag.getId());
+            }
+            return ids.toString();
+        } else {
+            return tagIds;
+        }
     }
 
     @Override

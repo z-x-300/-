@@ -82,7 +82,10 @@ public class BlogServiceImpl implements BlogService {
         if (blog1==null){
             throw new NotFoundException("该博客不存在！");
         }
+        blog.setViews(blog1.getViews());
+        blog.setCreateTime(blog1.getCreateTime());
         BeanUtils.copyProperties(blog,blog1);
+        blog1.setUpdateTime(new Date());
         return blogRepository.save(blog1);
     }
 

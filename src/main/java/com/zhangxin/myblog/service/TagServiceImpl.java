@@ -70,13 +70,27 @@ public class TagServiceImpl implements TagService {
         if (!"".equals(ids)&&ids!=null){
             String [] idarray =ids.split(",");
             for (int i=0;i<idarray.length;i++){
+                boolean isNum=false;
+                //判断传来的是否数字
+                isNum = idarray[i].matches("[0-9]+");
+                if (isNum)
+                {//是数字就添加
                 list.add(new Long(idarray[i]));
+                }else {
+                    //不是数字就表明是新标签，先添加到数据库
+                    Tag tag = new Tag();
+                    tag.setName(idarray[i]);
+                    saveTag(tag);
+                    Long id= tagRepository.findByName(idarray[i]).getId();
+                    list.add(id);
+                }
             }
         }
 
         return list;
     }
 
+//    public
     //更新标签
     @Transactional
     @Override
