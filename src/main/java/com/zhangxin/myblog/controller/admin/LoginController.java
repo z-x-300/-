@@ -1,9 +1,12 @@
 package com.zhangxin.myblog.controller.admin;
 
 import com.zhangxin.myblog.po.User;
+import com.zhangxin.myblog.service.BlogService;
+import com.zhangxin.myblog.service.CommentService;
 import com.zhangxin.myblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +26,12 @@ public class LoginController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private BlogService blogService;
+
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping
     public String loginPage() {
@@ -54,5 +63,20 @@ public class LoginController {
     public String logout(HttpSession session) {
         session.removeAttribute("user");
         return "redirect:/admin";
+    }
+
+    //博客底部信息
+    @GetMapping("/footer/blogmessage")
+    public String blogMessage(Model model){
+        Long blogTotal = blogService.countBlog();
+        Long blogViewTotal = blogService.blogViewCount();
+        Long blogCommentTotal = commentService.commentCount();
+        // int blogMessageTotal = blogService.getBlogMessageTotal();
+
+        model.addAttribute("blogTotal",blogTotal);
+        model.addAttribute("blogViewTotal",blogViewTotal);
+        model.addAttribute("blogCommentTotal",blogCommentTotal);
+        // model.addAttribute("blogMessageTotal",blogMessageTotal);
+        return "admin/fragments :: blogMessage";
     }
 }

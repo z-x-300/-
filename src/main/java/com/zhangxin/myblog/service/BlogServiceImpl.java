@@ -130,7 +130,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public Long countBlog() {
-        return blogRepository.count();
+        return blogRepository.BlogCount();
     }
 
 
@@ -165,5 +165,11 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
+    }
+
+    //获取博客浏览总数
+    @Override
+    public Long blogViewCount() {
+        return blogRepository.viewCount();
     }
 }

@@ -15,4 +15,7 @@ public interface CommentService {
 
     //保存评论信息
     Comment saveComment(Comment comment);
+
+    //获取评论总数
+    Long commentCount();
 }

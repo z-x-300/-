@@ -1,9 +1,11 @@
 package com.zhangxin.myblog.controller;
 
 import com.zhangxin.myblog.service.BlogService;
+import com.zhangxin.myblog.service.CommentService;
 import com.zhangxin.myblog.service.TagService;
 import com.zhangxin.myblog.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -31,6 +33,9 @@ public class IndexController {
 
     @Autowired
     private TagService tagService;
+
+    @Autowired
+    private CommentService commentService;
 
     //获取博客列表
     @GetMapping("/")
@@ -63,5 +68,27 @@ public class IndexController {
         model.addAttribute("blog",blogService.getAndConvert(id));
 
         return "details";
+    }
+
+    //跳转到关于页面
+    @GetMapping("/about")
+    public String about(){
+
+        return "about";
+    }
+
+    //博客底部信息
+    @GetMapping("/footer/blogmessage")
+    public String blogMessage(Model model){
+        Long blogTotal = blogService.countBlog();
+        Long blogViewTotal = blogService.blogViewCount();
+        Long blogCommentTotal = commentService.commentCount();
+       // int blogMessageTotal = blogService.getBlogMessageTotal();
+
+        model.addAttribute("blogTotal",blogTotal);
+        model.addAttribute("blogViewTotal",blogViewTotal);
+        model.addAttribute("blogCommentTotal",blogCommentTotal);
+       // model.addAttribute("blogMessageTotal",blogMessageTotal);
+        return "fragments :: blogMessage";
     }
 }

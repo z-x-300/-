@@ -20,7 +20,7 @@
 			<div class="ui container">
 				<div class="ui stackable grid">
 					<div class="eleven wide column">
-						<img src="../static/images/twg.jpg" class="ui rounded image" />
+						<img src="../static/images/twg.jpg" class="ui rounded image" th:src="@{/images/twg.jpg}"/>
 					</div>
 					<div class="five wide column m-opacity-mini">
 						<div class="ui top attached segment">
@@ -48,7 +48,7 @@
 
 						</div>
 						<div class="ui bottom attached segment">
-							<a href="#" class="ui circular icon button"><i class="github icon"></i></a>
+							<a href="https://github.com/z-x-300/-Blogbackend" target="_blank" class="ui github circular icon button" data-content="点击跳转到GitHub获取源码" data-position="bottom center"><i class="github icon" ></i></a>
 							<button id="wechatButton" class="ui circular icon button"><i class="weixin icon"></i></button>
 							<button id="qqButton" href="#" class="ui circular icon button"><i class="qq icon"></i></button>
 							<a href="#" class="ui email circular icon button" data-content="3030036133@qq.com" data-position="bottom center"><i class="envelope  icon"></i></a>
@@ -56,7 +56,7 @@
 								<div class="ui orange basic label">
 									<div class="ui images" style="font-size: inherit !important;">
 										<div class="image">
-											<img src="../static/images/wechat.png" alt="" class="ui rounded bordered image" style="width: 100px; height: 100px;" />
+											<img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded bordered image" style="width: 100px; height: 100px;" />
 											<div style="text-align: center;">微信</div>
 										</div>
 									</div>
@@ -66,7 +66,7 @@
 								<div class="ui orange basic label">
 									<div class="ui images" style="font-size: inherit !important;">
 										<div class="image">
-											<img src="../static/images/qq.png" alt="" class="ui rounded bordered image" style="width: 100px; height: 100px;" />
+											<img src="../static/images/qq.png" th:src="@{/images/qq.png}" alt="" class="ui rounded bordered image" style="width: 100px; height: 100px;" />
 											<div style="text-align: center;">QQ</div>
 										</div>
 									</div>
@@ -86,11 +86,10 @@
 		<!--底部内容-->
 		<footer th:replace="fragments::footer"></footer>
 
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-	    <script src="../static/js/time.js" th:src="@{/js/time.js}"></script>
+	    <script th:replace="fragments::script"></script>
 
 		<script>
+
 			$('.menu.toggle').click(function() {
 				$('.m-item').toggleClass('m-mobile-hide')
 			})
@@ -112,6 +111,9 @@
 			});
 			// 显示邮箱
 			$('.email').popup();
+
+			// 显示GitHub
+			$('.github').popup();
 		</script>
 	</body>
 

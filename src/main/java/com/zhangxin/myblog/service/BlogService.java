@@ -57,4 +57,7 @@ public interface BlogService {
 
     //删除博客
     void deleteBlog(Long id);
+
+   //获取博客浏览总数
+    Long blogViewCount();
 }

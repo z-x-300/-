@@ -48,6 +48,12 @@ public class CommentServiceImpl implements CommentService {
         return commentRepository.save(comment);
     }
 
+    //获取评论总数
+    @Override
+    public Long commentCount() {
+        return commentRepository.count();
+    }
+
     /**
      * 循环每个顶级的评论节点
      * @param comments

@@ -56,21 +56,21 @@
                         </div>
                         <!--<p id="htmer_time" class="item m-text-thin"></p>-->
                         <div id="blog-message">
-                            <div class="ui inverted link list">
+                            <div class="ui inverted link list" th:fragment="blogMessage">
                                 <div class="m-text-thin">
                                     文章总数：
                                     <h2 class="ui orange header m-inline-block m-margin-top-null"
-                                        style="font-size:medium;"> 14 </h2> 篇
+                                        style="font-size:medium;" th:text="${blogTotal}"> 14 </h2> 篇
                                 </div>
                                 <div class="m-text-thin">
-                                    访问总数：
+                                    浏览总数：
                                     <h2 class="ui orange header m-inline-block m-margin-top-null"
-                                        style="font-size:medium;"> 14 </h2> 次
+                                        style="font-size:medium;" th:text="${blogViewTotal}"> 14 </h2> 次
                                 </div>
                                 <div class="m-text-thin">
                                     评论总数：
                                     <h2 class="ui orange header m-inline-block m-margin-top-null"
-                                        style="font-size:medium;"> 14 </h2> 条
+                                        style="font-size:medium;" th:text="${blogCommentTotal}"> 14 </h2> 条
                                 </div>
                                 <div class="m-text-thin">
                                     留言总数：
@@ -95,13 +95,13 @@
             <div class="three wide column">
                 <h4 class="ui inverted header inverted header m-text-thin m-text-spaced">联系我</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">Email: 3030036133@qq.com</a>
-                    <a href="#" class="item">QQ: 3030036133</a>
+                    <a href="#" class="item" th:text="#{email}"></a>
+                    <a href="#" class="item" th:text="#{qq}"></a>
                 </div>
             </div>
             <div class="five wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">博客介绍</h4>
-                <p></p>
+                <p th:text="#{blog.information}"></p>
             </div>
         </div>
         <div class="ui inverted section divider"></div>
@@ -111,5 +111,15 @@
     </div>
 
 </footer>
+
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
+    <script src="../static/js/time.js" th:src="@{/js/time.js}"></script>
+    <script>
+        $('#blog-message').load(/*[[@{/admin/footer/blogmessage}]]*/"/admin/footer/blogmessage");
+    </script>
+</th:block>
 </body>
 </html>
