@@ -1,6 +1,7 @@
 package com.zhangxin.myblog.service;
 
 import com.zhangxin.myblog.po.Blog;
+import com.zhangxin.myblog.po.Type;
 import com.zhangxin.myblog.vo.BlogQuery;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -34,6 +35,9 @@ public interface BlogService {
 
     //搜索博客
     Page<Blog> listBlog(String query,Pageable pageable);
+
+    //根据分类获取博客列表
+    Page<Blog> listBlog(Type type,Pageable pageable);
 
     //添加博客
     Blog saveBlog(Blog blog);

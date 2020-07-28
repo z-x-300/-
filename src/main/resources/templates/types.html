@@ -26,248 +26,61 @@
                 </div>
                 <div class="right aligned column">
                     共
-                    <h2 class="ui orange header m-inline-block m-text-thin"> 14 </h2>个
+                    <h2 class="ui orange header m-inline-block m-text-thin" th:text="${#arrays.length(types)}"> 14 </h2>个
                 </div>
             </div>
         </div>
         <div class="ui attached segment m-padded-tb-large">
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic teal button">Java 基础</a>
-                <div class="ui basic teal left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
-            </div>
-            <div class="ui labeled button m-margin-tb-tiny">
-                <a href="#" class="ui basic  button">Java 基础</a>
-                <div class="ui basic  left pointing label">24</div>
+            <div class="ui labeled button m-margin-tb-tiny" th:each="type:${types}">
+                <a href="#" th:href="@{/types/{id}(id=${type.id})}" class="ui basic  button" th:classappend="${type.id==activeTypeId}?'teal'" th:text="${type.name}">Java 基础</a>
+                <div class="ui basic left pointing label" th:href="@{/types/{id}(id=${type.id})}" th:classappend="${type.id==activeTypeId}?'teal'" th:text="${#arrays.length(type.blogs)}">24</div>
             </div>
         </div>
         <div class="ui top attached teal segment">
-            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                <div class="ui mobile reversed stackable grid">
+            <div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
+                <div class="ui middle aligned mobile reversed stackable grid" >
                     <div class="eleven wide column">
-                        <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
-                        <p class="m-text">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0
-                            开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
-                        </p>
-                        <div class="ui stackable grid">
+                        <h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}"></a></h3>
+                        <p class="m-text m-margin-top-max" th:text="|${blog.description}......|"></p>
+                        <div class="ui grid m-margin-top-max">
                             <div class="eleven wide column">
                                 <div class="ui mini horizontal link list">
                                     <div class="item">
-                                        <img src="../static/images/001.jpg" alt="" class="ui avatar image"/>
-                                        <div class="content">
-                                            <a href="#" class="header">ZhangXin</a>
-                                        </div>
+                                        <img src="../static/images/me.jpg" th:src="@{${blog.user.avatar}}"  alt="" class="ui avatar image">
+                                        <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}" >oneStar</a></div>
                                     </div>
                                     <div class="item">
-                                        <i class="calendar icon"></i>2020-07-20
+                                        <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2020-01-01</span>
                                     </div>
                                     <div class="item">
-                                        <i class="eye icon"></i>1234
+                                        <i class="eye icon"></i> <span th:text="${blog.views}">2222</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="right attached five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">
-                                    SpringBoot
-                                </a>
+                            <div class="right aligned five wide column">
+                                <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.type.name}">好文</a>
                             </div>
                         </div>
-
                     </div>
+
+                    <!--博文首图-->
                     <div class="five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/001.jpg" alt="" class="ui rounded image"/>
+                        <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank">
+                            <img src="../static/images/001.jpg" th:src="@{${blog.firstPicture}}"  alt="" class="ui rounded image">
                         </a>
                     </div>
-                </div>
-            </div>
-            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
-                        <p class="m-text">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0
-                            开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
-                        </p>
-                        <div class="ui stackable grid">
-                            <div class="eleven wide column">
-                                <div class="ui mini horizontal link list">
-                                    <div class="item">
-                                        <img src="../static/images/001.jpg" alt="" class="ui avatar image"/>
-                                        <div class="content">
-                                            <a href="#" class="header">ZhangXin</a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <i class="calendar icon"></i>2020-07-20
-                                    </div>
-                                    <div class="item">
-                                        <i class="eye icon"></i>1234
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right attached five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">
-                                    SpringBoot
-                                </a>
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/001.jpg" alt="" class="ui rounded image"/>
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
-                        <p class="m-text">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0
-                            开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
-                        </p>
-                        <div class="ui stackable grid">
-                            <div class="eleven wide column">
-                                <div class="ui mini horizontal link list">
-                                    <div class="item">
-                                        <img src="../static/images/001.jpg" alt="" class="ui avatar image"/>
-                                        <div class="content">
-                                            <a href="#" class="header">ZhangXin</a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <i class="calendar icon"></i>2020-07-20
-                                    </div>
-                                    <div class="item">
-                                        <i class="eye icon"></i>1234
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right attached five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">
-                                    SpringBoot
-                                </a>
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/001.jpg" alt="" class="ui rounded image"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
-                        <p class="m-text">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0
-                            开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
-                        </p>
-                        <div class="ui stackable grid">
-                            <div class="eleven wide column">
-                                <div class="ui mini horizontal link list">
-                                    <div class="item">
-                                        <img src="../static/images/001.jpg" alt="" class="ui avatar image"/>
-                                        <div class="content">
-                                            <a href="#" class="header">ZhangXin</a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <i class="calendar icon"></i>2020-07-20
-                                    </div>
-                                    <div class="item">
-                                        <i class="eye icon"></i>1234
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right attached five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">
-                                    SpringBoot
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/001.jpg" alt="" class="ui rounded image"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
-                <div class="ui mobile reversed stackable grid">
-                    <div class="eleven wide column">
-                        <h3 class="ui header">Spring Boot-01- 快速入门篇</h3>
-                        <p class="m-text">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0
-                            开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。
-                        </p>
-                        <div class="ui stackable grid">
-                            <div class="eleven wide column">
-                                <div class="ui mini horizontal link list">
-                                    <div class="item">
-                                        <img src="../static/images/001.jpg" alt="" class="ui avatar image"/>
-                                        <div class="content">
-                                            <a href="#" class="header">ZhangXin</a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <i class="calendar icon"></i>2020-07-20
-                                    </div>
-                                    <div class="item">
-                                        <i class="eye icon"></i>1234
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right attached five wide column">
-                                <a href="#" target="_blank" class="ui teal basic label m-padded-mini m-text-thin">
-                                    SpringBoot
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="five wide column">
-                        <a href="#" target="_blank">
-                            <img src="../static/images/001.jpg" alt="" class="ui rounded image"/>
-                        </a>
-                    </div>
-                </div>
-            </div>
             <!--footer-->
-            <div class="ui bottom attached segment">
+            <div class="ui bottom attached segment" th:if="${page.totalPages}>1">
                 <div class="ui middle aligned two column grid">
                     <div class="column">
-                        <a href="#" class="ui mini teal basic button">上一页</a>
+                        <a href="#"th:href="@{'/types/'+${activeTypeId}(page=${page.number}-1)}" th:unless="${page.first}" class="ui mini teal basic button">上一页</a>
                     </div>
                     <div class="right aligned column">
-                        <a href="#" class="ui mini teal basic button">下一页</a>
+                        <a href="#" th:href="@{'/types/'+${activeTypeId}(page=${page.number}+1)}"  th:unless="${page.last}" class="ui mini teal basic button">下一页</a>
                     </div>
                 </div>
             </div>

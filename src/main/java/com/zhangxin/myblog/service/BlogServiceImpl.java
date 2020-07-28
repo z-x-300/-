@@ -54,7 +54,6 @@ public class BlogServiceImpl implements BlogService {
         BeanUtils.copyProperties(blog,b);
         String content = b.getContent();
         b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
-
         return b;
     }
 
@@ -103,6 +102,12 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Page<Blog> listBlog(String query, Pageable pageable) {
         return blogRepository.findByQuery(query, pageable);
+    }
+
+    //根据分类获取博客列表
+    @Override
+    public Page<Blog> listBlog(Type type,Pageable pageable) {
+        return blogRepository.findAllByType(type,pageable);
     }
 
 

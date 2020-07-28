@@ -1,6 +1,7 @@
 package com.zhangxin.myblog.dao;
 
 import com.zhangxin.myblog.po.Blog;
+import com.zhangxin.myblog.po.Type;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -34,4 +35,8 @@ public interface BlogRepository extends JpaRepository<Blog,Long> , JpaSpecificat
     @Modifying
     @Query("update Blog b set b.views =b.views+1 where  b.id=?1")
     void updateViews(Long id);
+
+    //根据分类获取博客列表
+    @Query("select b from Blog b where b.type=?1 and b.published=true ")
+    Page<Blog> findAllByType(Type type,Pageable pageable);
 }
