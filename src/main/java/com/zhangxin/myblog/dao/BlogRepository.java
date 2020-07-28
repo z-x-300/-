@@ -16,7 +16,7 @@ import java.util.List;
 public interface BlogRepository extends JpaRepository<Blog,Long> , JpaSpecificationExecutor<Blog> {
 
     //获取具体数量的推荐博客
-    @Query("select b from Blog b where b.recommend =true")
+    @Query("select b from Blog b where b.recommend =true and b.published=true ")
     List<Blog> findTop(Pageable pageable);
 
     //获取发布的博客列表
@@ -24,6 +24,6 @@ public interface BlogRepository extends JpaRepository<Blog,Long> , JpaSpecificat
     Page<Blog>  findAllPublished(Pageable pageable);
 
     //搜索博客
-    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+    @Query("select b from Blog b where (b.title like ?1 or b.content like ?1) and b.published=true ")
     Page<Blog> findByQuery(String query,Pageable pageable);
 }
