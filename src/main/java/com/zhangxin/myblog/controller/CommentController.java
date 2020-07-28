@@ -1,6 +1,7 @@
 package com.zhangxin.myblog.controller;
 
 import com.zhangxin.myblog.po.Comment;
+import com.zhangxin.myblog.po.User;
 import com.zhangxin.myblog.service.BlogService;
 import com.zhangxin.myblog.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * @author zhangxin
@@ -38,14 +41,23 @@ public class CommentController {
     }
 
     @PostMapping("/comments")
-    public String post(Comment comment){
+    public String post(Comment comment, HttpSession session){
 
         //获取评论的博客id
         Long blogId =comment.getBlog().getId();
         //根据博客id查询博客对象，并赋值给该评论（前端只传来博客id）
         comment.setBlog(blogService.getBlog(blogId));
-        //设置头像
-        comment.setAvatar(avatar);
+        //获取管理员信息
+        User user=(User)session.getAttribute("user");
+        if (user!=null){//管理员登录，设置管理员信息
+            comment.setAvatar(user.getAvatar());
+            comment.setAdminComment(true);
+//            comment.setNickname(user.getNickname());
+        }else {
+            //设置头像
+            comment.setAvatar(avatar);
+        }
+
         //保存评论
         commentService.saveComment(comment);
         return "redirect:/comments/"+comment.getBlog().getId();

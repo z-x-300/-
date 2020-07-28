@@ -25,7 +25,7 @@ public class CommentServiceImpl implements CommentService {
     //根据博客id获取评论列表
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
-        Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
+        Sort sort = Sort.by(Sort.Direction.ASC, "createTime");
         List<Comment> comments =commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
         return eachComment(comments);
     }
