@@ -17,6 +17,9 @@ public interface BlogService {
     //根据id获取博客
     Blog getBlog(Long id);
 
+    //根据id获取博客并转换格式
+    Blog getAndConvert(Long id);
+
     //动态获取博客列表
     Page<Blog> listBlog(Pageable pageable, BlogQuery blogQuery);
 

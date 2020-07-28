@@ -6231,3 +6231,261 @@ Caused by: java.lang.IllegalArgumentException: Mixing of ? parameters and other 
 2020-07-27 19:59:13.132  WARN 7460 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
 2020-07-27 19:59:13.252  INFO 7460 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
 2020-07-27 19:59:13.252  INFO 7460 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-27 20:01:50.423  INFO 7460 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:01:50.423  INFO 7460 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-27 20:01:50.437  INFO 7460 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:01:50.438  INFO 7460 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-27 20:02:08.446  INFO 7460 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:02:08.446  INFO 7460 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-27 20:02:08.457  INFO 7460 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:02:08.457  INFO 7460 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-27 20:21:45.648  INFO 10276 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 10276 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 20:21:45.651 DEBUG 10276 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 20:21:45.651  INFO 10276 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 20:21:45.693  INFO 10276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 20:21:45.693  INFO 10276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 20:21:47.306  INFO 10276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 20:21:47.368  INFO 10276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 4 JPA repository interfaces.
+2020-07-27 20:21:48.273  INFO 10276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 20:21:48.296  INFO 10276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 20:21:48.296  INFO 10276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 20:21:48.477  INFO 10276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 20:21:48.478  INFO 10276 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2785 ms
+2020-07-27 20:21:48.700  INFO 10276 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 20:21:48.783  INFO 10276 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 20:21:48.873  INFO 10276 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 20:21:48.980  WARN 10276 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 20:21:49.156  INFO 10276 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 20:21:49.282  INFO 10276 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 20:21:50.167  INFO 10276 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 20:21:50.215  INFO 10276 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 20:21:53.106  INFO 10276 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 20:21:53.113  INFO 10276 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 20:21:53.532  INFO 10276 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 20:21:53.599  INFO 10276 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 20:21:53.859  INFO 10276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 20:21:53.860  INFO 10276 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 20:21:54.353  INFO 10276 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 20:21:54.362  INFO 10276 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 9.497 seconds (JVM running for 10.713)
+2020-07-27 20:21:59.555  INFO 10276 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 20:21:59.560  INFO 10276 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 20:21:59.561  INFO 10276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 20:21:59.569  INFO 10276 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-27 20:21:59.595  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:21:59.595  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-27 20:21:59.764  WARN 10276 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-27 20:21:59.776  WARN 10276 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-27 20:21:59.920  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:21:59.921  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-27 20:22:04.399  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:22:04.399  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:22:04.563  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:22:04.563  INFO 10276 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:23:42.811  INFO 10276 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:23:42.811  INFO 10276 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:23:42.814  INFO 10276 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:23:42.814  INFO 10276 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:45:30.209  INFO 18748 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 18748 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 20:45:30.216 DEBUG 18748 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 20:45:30.217  INFO 18748 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 20:45:30.512  INFO 18748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 20:45:30.512  INFO 18748 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 20:45:31.286  INFO 18748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 20:45:31.365  INFO 18748 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 4 JPA repository interfaces.
+2020-07-27 20:45:32.187  INFO 18748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 20:45:32.220  INFO 18748 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 20:45:32.220  INFO 18748 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 20:45:32.469  INFO 18748 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 20:45:32.469  INFO 18748 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1957 ms
+2020-07-27 20:45:32.642  INFO 18748 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 20:45:32.711  INFO 18748 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 20:45:32.783  INFO 18748 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 20:45:32.897  WARN 18748 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 20:45:33.108  INFO 18748 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 20:45:33.324  INFO 18748 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 20:45:34.176  INFO 18748 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 20:45:34.220  INFO 18748 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 20:45:36.721  INFO 18748 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 20:45:36.728  INFO 18748 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 20:45:37.163  INFO 18748 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 20:45:37.276  INFO 18748 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 20:45:37.511  INFO 18748 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 20:45:37.512  INFO 18748 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 20:45:38.011  INFO 18748 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 20:45:38.017  INFO 18748 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 8.803 seconds (JVM running for 10.176)
+2020-07-27 20:45:44.373  INFO 18748 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 20:45:44.379  INFO 18748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 20:45:44.379  INFO 18748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 20:45:44.387  INFO 18748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-27 20:45:44.421  INFO 18748 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:45:44.421  INFO 18748 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:45:44.624  INFO 18748 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:45:44.625  INFO 18748 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:45:51.713  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:45:51.713  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:45:51.720  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:45:51.720  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:46:03.084  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:46:03.084  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:46:03.090  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:46:03.090  INFO 18748 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:47:42.881  INFO 15292 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 15292 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 20:47:42.883 DEBUG 15292 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 20:47:42.883  INFO 15292 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 20:47:42.925  INFO 15292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 20:47:42.926  INFO 15292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 20:47:44.011  INFO 15292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 20:47:44.105  INFO 15292 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 4 JPA repository interfaces.
+2020-07-27 20:47:44.932  INFO 15292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 20:47:44.969  INFO 15292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 20:47:44.969  INFO 15292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 20:47:45.128  INFO 15292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 20:47:45.128  INFO 15292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2202 ms
+2020-07-27 20:47:45.296  INFO 15292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 20:47:45.362  INFO 15292 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 20:47:45.444  INFO 15292 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 20:47:45.591  WARN 15292 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 20:47:45.749  INFO 15292 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 20:47:45.851  INFO 15292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 20:47:46.359  INFO 15292 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 20:47:46.410  INFO 15292 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 20:47:48.477  INFO 15292 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 20:47:48.484  INFO 15292 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 20:47:48.945  INFO 15292 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 20:47:49.019  INFO 15292 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 20:47:49.272  INFO 15292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 20:47:49.273  INFO 15292 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 20:47:49.737  INFO 15292 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 20:47:49.745  INFO 15292 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 7.643 seconds (JVM running for 8.848)
+2020-07-27 20:47:53.662  INFO 15292 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 20:47:53.668  INFO 15292 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 20:47:53.669  INFO 15292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 20:47:53.677  INFO 15292 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-27 20:47:53.712  INFO 15292 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:47:53.712  INFO 15292 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:47:54.042  INFO 15292 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:47:54.042  INFO 15292 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:49:18.657  INFO 2948 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 2948 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 20:49:18.660 DEBUG 2948 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 20:49:18.660  INFO 2948 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 20:49:18.705  INFO 2948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 20:49:18.706  INFO 2948 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 20:49:19.474  INFO 2948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 20:49:19.535  INFO 2948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 4 JPA repository interfaces.
+2020-07-27 20:49:20.140  INFO 2948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 20:49:20.147  INFO 2948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 20:49:20.147  INFO 2948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 20:49:20.289  INFO 2948 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 20:49:20.289  INFO 2948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1583 ms
+2020-07-27 20:49:20.415  INFO 2948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 20:49:20.453  INFO 2948 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 20:49:20.488  INFO 2948 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 20:49:20.570  WARN 2948 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 20:49:20.594  INFO 2948 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 20:49:20.681  INFO 2948 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 20:49:21.141  INFO 2948 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 20:49:21.156  INFO 2948 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 20:49:22.602  INFO 2948 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 20:49:22.607  INFO 2948 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 20:49:22.922  INFO 2948 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 20:49:22.966  INFO 2948 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 20:49:23.210  INFO 2948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 20:49:23.211  INFO 2948 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 20:49:23.654  INFO 2948 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 20:49:23.661  INFO 2948 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 5.646 seconds (JVM running for 7.057)
+2020-07-27 20:49:27.266  INFO 2948 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 20:49:27.271  INFO 2948 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 20:49:27.271  INFO 2948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 20:49:27.281  INFO 2948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-07-27 20:49:27.309  INFO 2948 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:49:27.309  INFO 2948 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:49:27.487  INFO 2948 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:49:27.487  INFO 2948 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 20:59:30.485  INFO 2644 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 2644 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 20:59:30.487 DEBUG 2644 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 20:59:30.487  INFO 2644 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 20:59:30.520  INFO 2644 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 20:59:30.521  INFO 2644 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 20:59:31.377  INFO 2644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 20:59:31.449  INFO 2644 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 4 JPA repository interfaces.
+2020-07-27 20:59:32.295  INFO 2644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 20:59:32.305  INFO 2644 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 20:59:32.305  INFO 2644 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 20:59:32.980  INFO 2644 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 20:59:32.980  INFO 2644 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2459 ms
+2020-07-27 20:59:33.200  INFO 2644 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 20:59:33.302  INFO 2644 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 20:59:33.564  INFO 2644 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 20:59:33.859  WARN 2644 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 20:59:34.087  INFO 2644 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 20:59:34.179  INFO 2644 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 20:59:34.644  INFO 2644 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 20:59:34.669  INFO 2644 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 20:59:36.326  INFO 2644 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 20:59:36.334  INFO 2644 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 20:59:36.743  INFO 2644 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 20:59:36.785  INFO 2644 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 20:59:37.024  INFO 2644 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 20:59:37.025  INFO 2644 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 20:59:37.496  INFO 2644 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 20:59:37.504  INFO 2644 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 7.741 seconds (JVM running for 8.786)
+2020-07-27 20:59:43.725  INFO 2644 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 20:59:43.732  INFO 2644 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 20:59:43.732  INFO 2644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 20:59:43.743  INFO 2644 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-27 20:59:43.782  INFO 2644 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 20:59:43.782  INFO 2644 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/22', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[22, {}]}
+2020-07-27 20:59:44.024  INFO 2644 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 20:59:44.024  INFO 2644 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 21:02:57.577  INFO 11076 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 11076 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-27 21:02:57.579 DEBUG 11076 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-27 21:02:57.579  INFO 11076 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-27 21:02:57.612  INFO 11076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-27 21:02:57.612  INFO 11076 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-27 21:02:59.778  INFO 11076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-27 21:02:59.841  INFO 11076 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 4 JPA repository interfaces.
+2020-07-27 21:03:00.638  INFO 11076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-27 21:03:00.656  INFO 11076 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-27 21:03:00.657  INFO 11076 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-27 21:03:00.938  INFO 11076 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-27 21:03:00.938  INFO 11076 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3326 ms
+2020-07-27 21:03:01.174  INFO 11076 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-27 21:03:01.267  INFO 11076 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-27 21:03:01.364  INFO 11076 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-27 21:03:01.413  WARN 11076 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-27 21:03:01.655  INFO 11076 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-27 21:03:01.803  INFO 11076 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-27 21:03:02.306  INFO 11076 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-27 21:03:02.330  INFO 11076 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-27 21:03:03.904  INFO 11076 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-27 21:03:03.910  INFO 11076 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-27 21:03:04.271  INFO 11076 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-27 21:03:04.326  INFO 11076 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-27 21:03:04.543  INFO 11076 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-27 21:03:04.544  INFO 11076 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-27 21:03:05.029  INFO 11076 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-27 21:03:05.038  INFO 11076 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 8.293 seconds (JVM running for 10.294)
+2020-07-27 21:08:18.684  INFO 11076 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=C5CEB0D313F17EB91FC67829650F969B] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-27 21:08:18.689  INFO 11076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-27 21:08:18.690  INFO 11076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-27 21:08:18.700  INFO 11076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-07-27 21:08:18.732  INFO 11076 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 21:08:18.732  INFO 11076 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/21', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[21, {}]}
+2020-07-27 21:08:18.879  INFO 11076 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 21:08:18.879  INFO 11076 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-27 21:09:58.417  INFO 11076 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 21:09:58.417  INFO 11076 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-27 21:09:58.434  WARN 11076 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-27 21:09:58.452  WARN 11076 --- [http-nio-8080-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-07-27 21:09:58.457  INFO 11076 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 21:09:58.457  INFO 11076 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-27 21:09:59.933  INFO 11076 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-27 21:09:59.933  INFO 11076 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/21', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[21, {}]}
+2020-07-27 21:09:59.941  INFO 11076 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-27 21:09:59.941  INFO 11076 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details

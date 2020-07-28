@@ -5,6 +5,7 @@ import com.zhangxin.myblog.dao.BlogRepository;
 import com.zhangxin.myblog.handler.NotFoundException;
 import com.zhangxin.myblog.po.Blog;
 import com.zhangxin.myblog.po.Type;
+import com.zhangxin.myblog.util.MarkdownUtils;
 import com.zhangxin.myblog.util.MyBeanUtils;
 import com.zhangxin.myblog.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -39,6 +40,22 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public Blog getBlog(Long id) {
         return blogRepository.getOne(id);
+    }
+
+    //根据id获取博客并转换格式
+    @Override
+    public Blog getAndConvert(Long id) {
+        Blog blog =blogRepository.getOne(id);
+        if (blog == null) {
+            throw new NotFoundException("该博客不存在");
+        }
+        Blog b = new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content = b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+
+       // blogRepository.updateViews(id);
+        return b;
     }
 
     //动态获取博客列表
