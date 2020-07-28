@@ -39,6 +39,9 @@ public interface BlogService {
     //根据分类获取博客列表
     Page<Blog> listBlog(Type type,Pageable pageable);
 
+    //根据标签获取博客列表
+    Page<Blog> listBlog(Long tagId,Pageable pageable);
+
     //添加博客
     Blog saveBlog(Blog blog);
 
