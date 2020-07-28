@@ -12,6 +12,6 @@ import java.util.List;
  */
 public interface CommentRepository extends JpaRepository<Comment,Long> {
 
-    //根据博客id获取评论列表
-    List<Comment> findByBlogId(Long blogId, Sort sort);
+    //根据博客id获取父级评论列表
+    List<Comment> findByBlogIdAndParentCommentNull(Long blogId, Sort sort);
 }
