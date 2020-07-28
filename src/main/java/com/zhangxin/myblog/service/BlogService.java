@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -41,6 +42,12 @@ public interface BlogService {
 
     //根据标签获取博客列表
     Page<Blog> listBlog(Long tagId,Pageable pageable);
+
+    //归档博客
+    Map<String,List<Blog>> archiveBlog();
+
+    //获取博客数量
+    Long countBlog();
 
     //添加博客
     Blog saveBlog(Blog blog);

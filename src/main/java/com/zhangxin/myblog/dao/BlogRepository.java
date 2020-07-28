@@ -39,4 +39,12 @@ public interface BlogRepository extends JpaRepository<Blog,Long> , JpaSpecificat
     //根据分类获取博客列表
     @Query("select b from Blog b where b.type=?1 and b.published=true ")
     Page<Blog> findAllByType(Type type,Pageable pageable);
+
+    //获取博客发表日期列表
+    @Query("select function('date_format',b.updateTime,'%Y') as year from Blog b group by function('date_format',b.updateTime,'%Y') order by year desc ")
+    List<String> findGroupYear();
+
+    //根据日期获取博客列表
+    @Query("select b from Blog b where function('date_format',b.updateTime,'%Y') = ?1")
+    List<Blog> findByYear(String year);
 }
