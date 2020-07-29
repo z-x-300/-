@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author zhangxin
  * @date 2020/7/29
  */
+//验证码验证工具类
 public class CodeUtil {
     /**
      * 将获取到的前端参数转为string类型

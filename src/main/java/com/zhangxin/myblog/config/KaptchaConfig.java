@@ -11,6 +11,8 @@ import java.util.Properties;
  * @author zhangxin
  * @date 2020/7/29
  */
+
+//验证码配置类
 @Configuration
 public class KaptchaConfig {
     @Bean

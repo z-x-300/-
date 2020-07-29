@@ -15,11 +15,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -129,7 +131,7 @@ public class BlogController {
     //Markdown编辑器上传图片
     @ResponseBody
     @PostMapping(value = "/uploadfile")
-    public Map<String,Object> demo(@RequestParam(value = "editormd-image-file", required = false) MultipartFile file, HttpServletRequest request) {
+    public Map<String,Object> markdownImageUpload(@RequestParam(value = "editormd-image-file", required = false) MultipartFile file, HttpServletRequest request) {
         Map<String,Object> resultMap = new HashMap<String,Object>();
         //保存
         try {
@@ -149,4 +151,22 @@ public class BlogController {
         System.out.println(resultMap.get("success"));
         return resultMap;
     }
+    @ResponseBody
+    @PostMapping("/upload")
+    public String upload(@RequestParam(value = "file", required = false) MultipartFile file,HttpServletRequest request){
+        try {
+            File imageFolder= new File(request.getServletContext().getRealPath("image/upload"));
+            File targetFile = new File(imageFolder,file.getOriginalFilename());
+            if(!targetFile.getParentFile().exists())
+                targetFile.getParentFile().mkdirs();
+            file.transferTo(targetFile);
+           }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String n ="http://127.0.0.1:8080/image/upload/"+file.getOriginalFilename();
+        return n;
+
+    }
+
 }

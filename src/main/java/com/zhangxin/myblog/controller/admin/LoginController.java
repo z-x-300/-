@@ -48,6 +48,8 @@ public class LoginController {
                         HttpSession session,
                         RedirectAttributes redirectAttributes,
                         HttpServletRequest request) {
+
+
         if (!CodeUtil.checkVerifyCode(request)) {
             redirectAttributes.addFlashAttribute("message", "验证码错误！");
             return "redirect:/admin";
