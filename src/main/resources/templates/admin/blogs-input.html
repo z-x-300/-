@@ -145,7 +145,12 @@
 					height: 640,
 					syncScrolling: "single",
 					// path: "../../static/lib/editormd/lib/"
-					path: "/lib/editormd/lib/"
+					path: "/lib/editormd/lib/",
+
+					/**上传图片相关配置如下*/
+					imageUpload : true,
+					imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+					imageUploadURL: "/admin/uploadfile"//后端的上传图片服务地址
 				});
 
 			});
