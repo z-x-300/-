@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -69,8 +70,25 @@ public class TagServiceImpl implements TagService {
     //获取具体数量的标签
     @Override
     public List<Tag> listTagTop(Integer size) {
-        Pageable pageable = PageRequest.of(0,size, Sort.by(Sort.Direction.DESC,"blogs.size"));
-        return tagRepository.findTop(pageable);
+       // Pageable pageable = PageRequest.of(0,size, Sort.by(Sort.Direction.DESC,"blogs.size"));
+        List<Tag> tags =tagRepository.findTop();
+        List<Tag> tagList =new ArrayList<>();
+        int size1 =tags.size();
+        for (int i=0;i<size1;i++){
+            for (int j=0;j<tags.get(i).getBlogs().size();j++){
+                if (!tags.get(i).getBlogs().get(j).isPublished()){
+                    tags.get(i).getBlogs().remove(tags.get(i).getBlogs().get(j));
+                }
+            }
+        }
+        Collections.sort(tags);
+        if (size>size1){
+            size=size1;
+        }
+        for (int i=0;i<size;i++){
+            tagList.add(tags.get(i));
+        }
+        return tagList;
     }
 
     //把字符串转换为list<Long>

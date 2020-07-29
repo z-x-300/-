@@ -18,5 +18,5 @@ public interface TypeRepository extends JpaRepository<Type,Long> {
 
     //获取具体数量的分类
     @Query("select t from Type t ")
-    List<Type> findTop(Pageable pageable);
+    List<Type> findTop();
 }

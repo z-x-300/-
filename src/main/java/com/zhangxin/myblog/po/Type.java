@@ -13,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "type")
-public class Type {
+public class Type implements Comparable<Type>{
 
     @Id
     @GeneratedValue
@@ -58,5 +58,10 @@ public class Type {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Type o) {
+        return o.blogs.size()-this.blogs.size(); // 降序
     }
 }

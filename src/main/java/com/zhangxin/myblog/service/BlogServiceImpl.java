@@ -112,7 +112,12 @@ public class BlogServiceImpl implements BlogService {
             @Override
             public Predicate toPredicate(Root<Blog> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
                 Join join =root.join("tags");
-                return criteriaBuilder.equal(join.get("id"),tagId);
+                List<Predicate> predicates = new ArrayList<>();
+                predicates.add(criteriaBuilder.equal(join.get("id"),tagId));
+                predicates.add(criteriaBuilder.equal(root.<Boolean>get("published"),true));
+                criteriaQuery.where(predicates.toArray(new Predicate[predicates.size()]));
+                //return criteriaBuilder.equal(join.get("id"),tagId);
+                return null;
             }
         },pageable);
     }

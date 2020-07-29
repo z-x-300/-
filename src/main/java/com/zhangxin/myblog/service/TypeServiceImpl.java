@@ -12,6 +12,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -60,8 +62,25 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public List<Type> listTypeTop(Integer size) {
       //  Sort sort =new Sort()
-        Pageable pageable =PageRequest.of(0,size,Sort.by(Sort.Direction.DESC,"blogs.size"));
-        return typeRepository.findTop(pageable);
+        //Pageable pageable =PageRequest.of(0,size,Sort.by(Sort.Direction.DESC,"blogs.size"));
+        List<Type> types =typeRepository.findTop();
+        List<Type> typeList =new ArrayList<>();
+        int size1 =types.size();
+        for (int i=0;i<size1;i++){
+            for (int j=0;j<types.get(i).getBlogs().size();j++){
+                if (!types.get(i).getBlogs().get(j).isPublished()){
+                    types.get(i).getBlogs().remove(types.get(i).getBlogs().get(j));
+                }
+            }
+        }
+        Collections.sort(types);
+        if (size>size1){
+            size=size1;
+        }
+        for (int i=0;i<size;i++){
+            typeList.add(types.get(i));
+        }
+        return typeList;
     }
 
     //修改分类

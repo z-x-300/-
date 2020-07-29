@@ -39,7 +39,7 @@
 				</div>
 				<div class="ui top attached teal segment">
 					<div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear" th:each="blog : ${page.content}">
-						<div class="ui mobile reversed stackable grid">
+						<div class="ui mobile reversed stackable grid" >
 							<div class="eleven wide column">
 								<h3 class="ui header" ><a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">Spring Boot-01- 快速入门篇</a></h3>
 								<p class="m-text" th:text="|${blog.description}......|">pring Boot 是由 Pivotal 团队提供的全新框架。Spring Boot 是所有基于 Spring Framework 5.0 开发的项目的起点。Spring Boot 的设计是为了让你尽可能快的跑起来 Spring 应用程序并且尽可能减少你的配置文件。

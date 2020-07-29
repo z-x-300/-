@@ -11,7 +11,7 @@ import java.util.List;
 //标签实体类
 @Entity
 @Table(name = "tag")
-public class Tag {
+public class Tag implements Comparable<Tag>{
 
     @Id
     @GeneratedValue
@@ -55,5 +55,10 @@ public class Tag {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Tag o) {
+        return o.blogs.size()-this.blogs.size(); // 降序
     }
 }

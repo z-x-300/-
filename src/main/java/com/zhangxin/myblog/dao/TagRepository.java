@@ -18,5 +18,5 @@ public interface TagRepository extends JpaRepository<Tag,Long> {
 
     //获取具体数量的标签
     @Query("select t from Tag t")
-    List<Tag> findTop(Pageable pageable);
+    List<Tag> findTop();
 }
