@@ -2224,3 +2224,194 @@ Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: unexpected token
 2020-07-29 15:01:36.925  INFO 13560 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-07-29 15:01:36.925  INFO 13560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2020-07-29 15:01:36.935  INFO 13560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-29 15:16:07.148  INFO 11208 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 11208 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-29 15:16:07.150 DEBUG 11208 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-29 15:16:07.150  INFO 11208 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-29 15:16:07.197  INFO 11208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-29 15:16:07.198  INFO 11208 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-29 15:16:08.658  INFO 11208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-29 15:16:08.732  INFO 11208 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67ms. Found 5 JPA repository interfaces.
+2020-07-29 15:16:09.507  INFO 11208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-29 15:16:09.535  INFO 11208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-29 15:16:09.535  INFO 11208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-29 15:16:09.692  INFO 11208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-29 15:16:09.693  INFO 11208 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2495 ms
+2020-07-29 15:16:09.867  INFO 11208 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-29 15:16:09.925  INFO 11208 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-29 15:16:09.998  INFO 11208 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-29 15:16:10.068  WARN 11208 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-29 15:16:10.234  INFO 11208 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-29 15:16:10.333  INFO 11208 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-29 15:16:10.887  INFO 11208 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-29 15:16:10.934  INFO 11208 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-29 15:16:12.221  INFO 11208 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-29 15:16:12.228  INFO 11208 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-29 15:16:12.644  INFO 11208 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-29 15:16:12.929  INFO 11208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-29 15:16:13.123  INFO 11208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-29 15:16:13.124  INFO 11208 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-29 15:16:13.451  INFO 11208 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-29 15:16:13.461  INFO 11208 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 6.946 seconds (JVM running for 8.087)
+2020-07-29 15:16:20.359  INFO 11208 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=8BD164A29CF512584F79A6FD355A34CD] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-29 15:16:20.363  INFO 11208 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-29 15:16:20.363  INFO 11208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-29 15:16:20.377  INFO 11208 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-07-29 15:16:20.513  INFO 11208 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:16:20.513  INFO 11208 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.TagShowController.tags', args=[Page request [number: 0, size 4, sort: updateTime: DESC], -1, {}]}
+2020-07-29 15:16:20.633  INFO 11208 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:16:20.634  INFO 11208 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}tags
+2020-07-29 15:16:21.466  INFO 11208 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:16:21.466  INFO 11208 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:16:21.483  INFO 11208 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:16:21.483  INFO 11208 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:16:23.482  INFO 11208 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:16:23.482  INFO 11208 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-29 15:16:23.522  INFO 11208 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:16:23.522  INFO 11208 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-29 15:16:24.159  INFO 11208 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:16:24.159  INFO 11208 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:16:24.169  INFO 11208 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:16:24.170  INFO 11208 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:17:58.730  INFO 19684 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 19684 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-29 15:17:58.732 DEBUG 19684 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-29 15:17:58.733  INFO 19684 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-29 15:17:58.770  INFO 19684 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-29 15:17:58.770  INFO 19684 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-29 15:18:00.516  INFO 19684 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-29 15:18:00.598  INFO 19684 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 5 JPA repository interfaces.
+2020-07-29 15:18:01.508  INFO 19684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-29 15:18:01.517  INFO 19684 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-29 15:18:01.517  INFO 19684 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-29 15:18:01.687  INFO 19684 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-29 15:18:01.687  INFO 19684 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2917 ms
+2020-07-29 15:18:01.862  INFO 19684 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-29 15:18:01.934  INFO 19684 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-29 15:18:02.024  INFO 19684 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-29 15:18:02.090  WARN 19684 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-29 15:18:02.297  INFO 19684 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-29 15:18:02.841  INFO 19684 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-29 15:18:03.518  INFO 19684 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-29 15:18:03.561  INFO 19684 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-29 15:18:05.179  INFO 19684 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-29 15:18:05.192  INFO 19684 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-29 15:18:05.619  INFO 19684 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-29 15:18:05.668  INFO 19684 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-29 15:18:06.151  INFO 19684 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-29 15:18:06.153  INFO 19684 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-29 15:18:06.476  INFO 19684 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-29 15:18:06.484  INFO 19684 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 8.529 seconds (JVM running for 9.691)
+2020-07-29 15:18:09.915  INFO 19684 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=8BD164A29CF512584F79A6FD355A34CD] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-29 15:18:09.924  INFO 19684 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-29 15:18:09.924  INFO 19684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-29 15:18:09.940  INFO 19684 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-07-29 15:18:10.014  INFO 19684 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:18:10.019  INFO 19684 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-29 15:18:10.294  INFO 19684 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:18:10.295  INFO 19684 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-29 15:18:12.140  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:18:12.141  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:18:12.205  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:18:12.206  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:18:13.433  INFO 19684 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:18:13.433  INFO 19684 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/blog/21', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blog', args=[21, {}]}
+2020-07-29 15:18:13.927  INFO 19684 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:18:13.928  INFO 19684 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details
+2020-07-29 15:18:15.426  INFO 19684 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:18:15.427  INFO 19684 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:18:15.434  INFO 19684 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:18:15.435  INFO 19684 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:18:15.807  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:18:15.807  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/comments/21', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CommentController.comments', args=[21, {}]}
+2020-07-29 15:18:16.020  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:18:16.021  INFO 19684 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details :: commentList
+2020-07-29 15:20:23.927  INFO 904 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 904 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-29 15:20:23.929 DEBUG 904 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-29 15:20:23.930  INFO 904 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-29 15:20:23.964  INFO 904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-29 15:20:23.964  INFO 904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-29 15:20:25.830  INFO 904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-29 15:20:25.899  INFO 904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 5 JPA repository interfaces.
+2020-07-29 15:20:26.666  INFO 904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-29 15:20:26.702  INFO 904 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-29 15:20:26.702  INFO 904 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-29 15:20:26.872  INFO 904 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-29 15:20:26.873  INFO 904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2909 ms
+2020-07-29 15:20:27.032  INFO 904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-29 15:20:27.087  INFO 904 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-29 15:20:27.170  INFO 904 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-29 15:20:27.314  WARN 904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-29 15:20:27.524  INFO 904 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-29 15:20:27.655  INFO 904 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-29 15:20:28.212  INFO 904 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-29 15:20:28.248  INFO 904 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-29 15:20:29.635  INFO 904 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-29 15:20:29.656  INFO 904 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-29 15:20:30.056  INFO 904 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-29 15:20:30.113  INFO 904 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-29 15:20:30.326  INFO 904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-29 15:20:30.327  INFO 904 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-29 15:20:30.925  INFO 904 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-29 15:20:30.932  INFO 904 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 7.746 seconds (JVM running for 8.819)
+2020-07-29 15:20:37.676  INFO 904 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=8BD164A29CF512584F79A6FD355A34CD] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-29 15:20:37.682  INFO 904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-29 15:20:37.682  INFO 904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-29 15:20:37.691  INFO 904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-29 15:20:37.717  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:37.718  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-29 15:20:37.996  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:37.997  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-29 15:20:39.072  INFO 904 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:39.073  INFO 904 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:20:39.094  INFO 904 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:39.094  INFO 904 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:20:50.257  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:50.258  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.TypeShowController.types', args=[Page request [number: 0, size 4, sort: updateTime: DESC], -1, {}]}
+2020-07-29 15:20:50.376  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:50.376  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}types
+2020-07-29 15:20:50.748  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:50.748  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:20:50.752  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:50.753  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:20:57.087  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:57.087  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.TagShowController.tags', args=[Page request [number: 0, size 4, sort: updateTime: DESC], -1, {}]}
+2020-07-29 15:20:57.142  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:57.142  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}tags
+2020-07-29 15:20:57.453  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:20:57.453  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:20:57.464  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:20:57.465  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:21:07.148  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:07.149  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/types/-1', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.TypeShowController.types', args=[Page request [number: 0, size 4, sort: updateTime: DESC], -1, {}]}
+2020-07-29 15:21:07.167  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:07.167  INFO 904 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}types
+2020-07-29 15:21:07.459  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:07.459  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:21:07.463  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:07.464  INFO 904 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:21:18.335  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:18.335  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/tags/-1', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.TagShowController.tags', args=[Page request [number: 0, size 4, sort: updateTime: DESC], -1, {}]}
+2020-07-29 15:21:18.349  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:18.349  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}tags
+2020-07-29 15:21:18.607  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:18.607  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:21:18.616  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:18.617  INFO 904 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:21:20.899  INFO 904 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:20.899  INFO 904 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/archives', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.ArchiveShowController.archives', args=[{}]}
+2020-07-29 15:21:20.907  INFO 904 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:20.907  INFO 904 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}archives
+2020-07-29 15:21:21.286  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:21.287  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:21:21.292  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:21.292  INFO 904 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-29 15:21:28.072  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:28.073  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/search', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.search', args=[Page request [number: 0, size 4, sort: updateTime: DESC], java, {}]}
+2020-07-29 15:21:28.092  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:28.092  INFO 904 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}search
+2020-07-29 15:21:28.431  INFO 904 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-29 15:21:28.431  INFO 904 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-29 15:21:28.436  INFO 904 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-29 15:21:28.436  INFO 904 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
