@@ -37,6 +37,13 @@
 										<input type="password" name="password" placeholder="密码">
 									</div>
 								</div>
+								<div class="field">
+									<div class="ui left input">
+										<input type="text" name="verifyCodeActual"  placeholder="验证码">&nbsp;&nbsp;&nbsp;&nbsp;
+										<img id="captcha_img" alt="点击更换" title="点击更换"
+											 onclick="refresh()" src="/kaptcha" />
+									</div>
+								</div>
 								<button class="ui fluid large teal submit button">登   录</button>
 							</div>
 
@@ -69,9 +76,21 @@
 							type: 'empty',
 							prompt: '请输入密码'
 						}]
+					},
+					verifyCodeActual: {
+						identifier: 'verifyCodeActual',
+						rules: [{
+							type: 'empty',
+							prompt: '请输入验证码'
+						}]
 					}
 				}
 			});
+
+			//刷新验证码
+			function refresh() {
+				document.getElementById('captcha_img').src="/kaptcha?"+Math.random();
+			}
 		</script>
 	</body>
 
