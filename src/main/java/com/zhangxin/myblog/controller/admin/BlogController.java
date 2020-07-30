@@ -150,6 +150,7 @@ public class BlogController {
         System.out.println(resultMap.get("success"));
         return resultMap;
     }
+    //图片上传
     @ResponseBody
     @PostMapping("/upload")
     public String upload(@RequestParam(value = "file", required = false) MultipartFile file,HttpServletRequest request){

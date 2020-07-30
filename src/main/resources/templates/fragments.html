@@ -18,7 +18,7 @@
 <body>
 
 <!--导航-->
-<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini m-opacity-mini">
+<nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini ">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h2 class="ui blue header item">Blog</h2>
@@ -34,6 +34,21 @@
                         <i onclick="document.forms['search'].submit()" class="search link icon"></i>
                     </div>
                 </form>
+            </div>
+            <a href="#" th:href="@{/admin}" class="m-item item m-mobile-hide" ><img th:src="@{/images/admin.png}" style="width: 30px; padding-right: 0.5em;"></img><spa>管理员入口</spa></a>
+            <div class=" m-item item m-mobile-hide menu" >
+                <div class="ui dropdown item">
+                    <div class="text">
+                        <img src="../../static/images/bg.jpg"  th:src="${session.user!=null}? ${session.user.avatar}:@{/images/head.png}" alt="" class="ui avatar image" />
+                        <span th:text="${session.user!=null}?${session.user.username}:'未登录'">未登录</span>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" th:if="${session.user==null}" th:href="@{/admin/logout}" class="item">登录</a>
+                        <a href="#" th:if="${session.user==null}" th:href="@{/admin/logout}" class="item">注册</a>
+                        <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -121,6 +136,11 @@
     <script src="../static/js/time.js" th:src="@{/js/time.js}"></script>
     <script>
         $('#blog-message').load(/*[[@{/footer/blogmessage}]]*/"/footer/blogmessage");
+
+        //下拉列表
+        $('.ui.dropdown').dropdown({
+            on: 'hover'
+        });
     </script>
 </th:block>
 </body>
