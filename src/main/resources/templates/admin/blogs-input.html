@@ -85,11 +85,14 @@
 					<div class="required field">
 						<div class="ui left labeled input">
 							<label class="ui teal basic label">首图</label>
-							<input type="text" id="firstPicture" name="firstPicture" placeholder="首图引用地址" th:value="*{firstPicture}"/>
-							<input type="file"  id="file"/>
-							<button id="button" type="button" >上传</button>
+							<input type="text" id="firstPicture" name="firstPicture" placeholder="首图引用地址" th:value="*{firstPicture}" readonly="true"/>
+							<input type="file" style="display:none"  id="file"/>
+							<button id="upload-btn" type="button" class="ui teal button" >上传</button>
 
 						</div>
+					</div>
+					<div class="required field">
+						<img src="../static/images/001.jpg" th:src="@{*{firstPicture}}" id="show-img" class="ui fluid rounded image">
 					</div>
 					<div class="required field">
 						<textarea name="description" th:text="*{description}" placeholder="博客描述..." maxlength="200"></textarea>
@@ -239,7 +242,7 @@
 			});
 
 			$(function () {
-				$("#button").click(function () {
+				$("#upload-btn").click(function () {
 					var form = new FormData();
 					form.append("file", document.getElementById("file").files[0]);
 					$.ajax({
@@ -253,10 +256,20 @@
 						contentType: false,
 						success: function (data) {   //成功，回调函数
 							$("#firstPicture").val(data);
+							$("#show-img").attr("src",data);
+
 						}
 
 					});
 				})
+			})
+
+			$(function () {
+				$("#show-img").click(function () {
+					$("#file").click();
+
+				})
+
 			})
 		</script>
 	</body>

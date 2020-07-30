@@ -14,14 +14,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -133,16 +130,18 @@ public class BlogController {
     @PostMapping(value = "/uploadfile")
     public Map<String,Object> markdownImageUpload(@RequestParam(value = "editormd-image-file", required = false) MultipartFile file, HttpServletRequest request) {
         Map<String,Object> resultMap = new HashMap<String,Object>();
+        String fileName=System.currentTimeMillis()+file.getOriginalFilename();
         //保存
         try {
-            File imageFolder= new File(request.getServletContext().getRealPath("image/upload"));
-            File targetFile = new File(imageFolder,file.getOriginalFilename());
+
+            File imageFolder= new File(request.getServletContext().getRealPath("/upload/images"));
+            File targetFile = new File(imageFolder,fileName);
             if(!targetFile.getParentFile().exists())
                 targetFile.getParentFile().mkdirs();
             file.transferTo(targetFile);
             resultMap.put("success", 1);
             resultMap.put("message", "上传成功！");
-            resultMap.put("url","http://127.0.0.1:8080/image/upload/"+file.getOriginalFilename());
+            resultMap.put("url","http://127.0.0.1:8080/upload/images/"+fileName);
         } catch (Exception e) {
             resultMap.put("success", 0);
             resultMap.put("message", "上传失败！");
@@ -154,9 +153,10 @@ public class BlogController {
     @ResponseBody
     @PostMapping("/upload")
     public String upload(@RequestParam(value = "file", required = false) MultipartFile file,HttpServletRequest request){
+        String fileName=System.currentTimeMillis()+file.getOriginalFilename();
         try {
-            File imageFolder= new File(request.getServletContext().getRealPath("image/upload"));
-            File targetFile = new File(imageFolder,file.getOriginalFilename());
+            File imageFolder= new File(request.getServletContext().getRealPath("/upload/images"));
+            File targetFile = new File(imageFolder,fileName);
             if(!targetFile.getParentFile().exists())
                 targetFile.getParentFile().mkdirs();
             file.transferTo(targetFile);
@@ -164,7 +164,7 @@ public class BlogController {
             e.printStackTrace();
         }
 
-        String n ="http://127.0.0.1:8080/image/upload/"+file.getOriginalFilename();
+        String n ="http://127.0.0.1:8080/upload/images/"+fileName;
         return n;
 
     }
