@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="332a2b11-fb0f-4d41-a13c-efc2aa5ae04f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/admin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/head.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myblog-dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/myblog-dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/admin/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/admin/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/ajaxFileupload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/admin/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhangxin/myblog/interceptor/LoginInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,23 +70,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../项目二/Tmall_SSM" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\自学\项目\项目三\后端\myblog\src\main\webapp" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.zhangxin.myblog" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\自学\项目\项目三\后端\myblog\src\main\resources\templates" />
       <recent name="F:\自学\项目\项目三\后端\myblog\src\main\resources\static\images" />
       <recent name="F:\自学\项目\项目三\后端\myblog\src\main\resources\static\lib\fileinput" />
-      <recent name="F:\自学\项目\项目三\后端\myblog\src\main\resources\templates" />
       <recent name="F:\自学\项目\项目三\后端\myblog\src\main\java\com\zhangxin\myblog\util" />
       <recent name="F:\自学\项目\项目三\后端\myblog\src\main\resources\templates\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\自学\项目\项目三\后端\myblog\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MyblogApplication">
@@ -151,7 +150,8 @@
       <workItem from="1596004756896" duration="7738000" />
       <workItem from="1596013924830" duration="7331000" />
       <workItem from="1596022529404" duration="5550000" />
-      <workItem from="1596068686521" duration="12860000" />
+      <workItem from="1596068686521" duration="13053000" />
+      <workItem from="1596091105447" duration="12262000" />
     </task>
     <task id="LOCAL-00001" summary="框架搭建">
       <created>1595641445103</created>
@@ -419,14 +419,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596074400606</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="前端添加管理员登录入口">
+      <created>1596082302679</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1596082302679</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="博客搜索和分类下拉列表功能的实现" />
     <MESSAGE value="博客新增功能的实现" />
     <MESSAGE value="博客编辑和删除功能的实现，可以添加数据库不存在标签（标签删除存在bug待解决）" />
     <MESSAGE value="添加博客描述，修复更新博客的bug" />
@@ -451,7 +457,8 @@
     <MESSAGE value="添加验证码验证" />
     <MESSAGE value="添加图片上传的功能（存在bug）" />
     <MESSAGE value="添加图片上传的功能完整" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加图片上传的功能完整" />
+    <MESSAGE value="前端添加管理员登录入口" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端添加管理员登录入口" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Assign_Data_Sources" timestamp="1595673094911">
@@ -478,62 +485,62 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595985845239" />
-    <state x="262" y="6" key="CommitChangelistDialog2" timestamp="1596074396875">
+    <state x="262" y="6" key="CommitChangelistDialog2" timestamp="1596082300645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="262" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596074396875" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1596079066460">
+    <state x="262" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596082300645" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1596094873313">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596079066460" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1596082241663">
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596094873313" />
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596082241663" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1596082241662">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596082241662" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1596082241662">
+    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596082241662" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1596082241662">
+    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596082241662" />
-    <state width="1493" height="175" key="GridCell.Tab.1.bottom" timestamp="1596082241663">
+    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.1.bottom" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596082241663" />
-    <state width="1493" height="175" key="GridCell.Tab.1.center" timestamp="1596082241663">
+    <state width="1493" height="175" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.1.center" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596082241663" />
-    <state width="1493" height="175" key="GridCell.Tab.1.left" timestamp="1596082241663">
+    <state width="1493" height="175" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.1.left" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596082241663" />
-    <state width="1493" height="175" key="GridCell.Tab.1.right" timestamp="1596082241663">
+    <state width="1493" height="175" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="175" key="GridCell.Tab.1.right" timestamp="1596103234687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="175" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596082241663" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1596028559799">
+    <state width="1493" height="175" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596103234687" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1596099713882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596028559799" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1596028559798">
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596099713882" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1596099713882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596028559798" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1596028559798">
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1596099713882" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1596099713882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596028559798" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1596028559798">
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1596099713882" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1596099713882">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596028559798" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1596099713882" />
     <state x="299" y="68" key="Maven.ArtifactSearchDialog" timestamp="1595730598217">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -542,10 +549,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595642165644" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596074423852">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1596082315781">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596074423852" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596082315781" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1595938486113">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

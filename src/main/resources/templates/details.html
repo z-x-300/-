@@ -18,6 +18,10 @@
 	<!--中间内容-->
 		<div id="waypoint" class=" m-container m-padded-tb-huge animated fadeInLeftBig">
 			<div class="ui container">
+				<div class="ui negative message" th:unless="${#strings.isEmpty(message)}">
+					<i class="close icon"></i>
+					<div class="" th:text="${message}">提示：操作成功！</div>
+				</div>
 				<!--头部-->
 				<div class="ui top attached segment ">
 					<div class="ui  horizontal link list">
@@ -423,7 +427,7 @@
 								<h3 class="ui dividing header">评论</h3>
 								<div class="comment" th:each="comment : ${comments}">
 									<a class="avatar">
-										<img src="../static/images/001.jpg"  class="ui avatar image" th:src="@{${comment.avatar}}">
+										<img src="../static/images/001.jpg"  class="ui  circular image" th:src="@{${comment.avatar}}" style="width: 30px;height:30px;">
 									</a>
 									<div class="content">
 										<a class="author">
@@ -438,7 +442,7 @@
 										</div>
 										<div class="actions">
 											<a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)" >回复</a>
-											<a class="delete" href="#" onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')" th:if="${session.user}">删除</a>
+<!--											<a class="delete" href="#" onclick="return confirm('确定要删除该评论吗？三思啊! 删了可就没了！')" th:if="${session.user}">删除</a>-->
 
 										</div>
 									</div>
@@ -446,7 +450,7 @@
 									<div class="comments" th:if="${#arrays.length(comment.replyComments)}">
 										<div class="comment" th:each="reply:${comment.replyComments}">
 											<a class="avatar">
-												<img src="../static/images/bg.jpg"  class="ui avatar image" th:src="@{${comment.avatar}}">
+												<img src="../static/images/bg.jpg"  th:src="@{${reply.avatar}}" class="ui avatar image" style="width: 30px;height:30px;">
 											</a>
 											<div class="content">
 												<a class="author">
@@ -471,8 +475,9 @@
 							</div>
 						</div>
 					</div>
-					<div id="comment-form" class="ui form">
+					<div id="comment-form" class="ui comment form">
 						<input type="hidden" name="blog.id" th:value="${blog.id}">
+						<input type="hidden" th:value="${session.user}" id="user">
 						<input type="hidden" name="parentComment.id" value="-1">
 						<div class="field">
 							<textarea name="content" placeholder="请输入评论信息..."></textarea>
@@ -480,19 +485,66 @@
 						<div class="fields">
 							<div class="field m-mobile-wide m-margin-bottom-small">
 								<div class="ui left icon input">
-									<i class="user icon"></i>
-									<input type="text" name="nickname" placeholder="姓名"  th:value="${session.user}!=null ? ${session.user.nickname}">
+<!--									<i class="user icon"></i>-->
+									<input type="hidden" name="nickname" placeholder="姓名"  th:value="${session.user}!=null ? ${session.user.nickname}">
 								</div>
 							</div>
 							<div class="field m-mobile-wide m-margin-bottom-small">
 								<div class="ui left icon input">
-									<i class="mail icon"></i>
-									<input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
+<!--									<i class="mail icon"></i>-->
+									<input type="hidden" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
 								</div>
 							</div>
 							<div class="field  m-margin-bottom-small m-mobile-wide">
 								<button id="commentpost-btn" type="button" class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
 							</div>
+							<div class="ui error mini message"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--模态框登录-->
+			<div class="ui container">
+				<div class="ui small login modal" style="height: 400px;">
+					<div class="ui mini aligned center aligned grid">
+						<div class="column">
+							<h2 class="ui teal image header">
+								<div class="content m-padded-tb">
+									博客登录
+								</div>
+							</h2>
+							<form class="ui large login form" method="post" action="#" th:action="@{/model/login}">
+								<input type="hidden" name="blogId" th:value="${blog.id}">
+								<div class="ui  segment">
+									<div class="field">
+										<div class="ui left icon input">
+											<i class="user icon"></i>
+											<input type="text" name="username" placeholder="用户名">
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui left icon input">
+											<i class="lock icon"></i>
+											<input type="password" name="password" placeholder="密码">
+										</div>
+									</div>
+									<div class="field">
+										<div class="ui left input">
+											<input type="text" name="verifyCodeActual"  placeholder="验证码">&nbsp;&nbsp;&nbsp;&nbsp;
+											<img id="captcha_img" alt="点击更换" title="点击更换"
+												 onclick="refresh()" src="/kaptcha" />
+										</div>
+									</div>
+									<button class="ui fluid large teal submit button">登   录</button>
+								</div>
+
+								<div class="ui error mini message"></div>
+<!--								<div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>-->
+
+							</form>
+
 						</div>
 					</div>
 				</div>
@@ -598,44 +650,62 @@
 			})
 
 			//评论表单验证
-			$('.ui.form').form({
+			$('.ui.comment.form').form({
 				fields: {
-					title: {
-						identifier: 'content',
-						rules: [{
-							type: 'empty',
-							prompt: '请输入评论内容'
-						}
-						]
-					},
 					content: {
-						identifier: 'nickname',
+						identifier: 'name',
 						rules: [{
 							type: 'empty',
-							prompt: '请输入你的大名'
+							prompt: '请输入评论'
+						}]
+					}
+				}
+
+			});
+
+			$('.ui.login.form').form({
+				fields: {
+					username: {
+						identifier: 'username',
+						rules: [{
+							type: 'empty',
+							prompt: '请输入用户名'
 						}]
 					},
-					type: {
-						identifier: 'email',
+					password: {
+						identifier: 'password',
 						rules: [{
-							type: 'email',
-							prompt: '请填写正确的邮箱地址'
+							type: 'empty',
+							prompt: '请输入密码'
+						}]
+					},
+					verifyCodeActual: {
+						identifier: 'verifyCodeActual',
+						rules: [{
+							type: 'empty',
+							prompt: '请输入验证码'
 						}]
 					}
 				}
 			});
-
 			$(function () {
 				$("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
 			});
+			var user =$("#user").val();
 			$('#commentpost-btn').click(function () {
-				var boo = $('.ui.form').form('validate form');
-				if (boo) {
-					console.log('校验成功');
-					postData();
-				} else {
-					console.log('校验失败');
+				if(user==""){
+					$(".ui.login.modal").modal("show");
+				}else {
+					var boo = $('.ui.comment.form').form('validate form');
+					if (boo) {
+						console.log('校验成功');
+						postData();
+					} else {
+						console.log('校验失败');
+					}
 				}
+
+
 			});
 
 
@@ -668,6 +738,14 @@
 				$("[name='parentComment.id']").val(commentId);
 				$(window).scrollTo($('#comment-form'),500);
 			}
+
+			//消息提示关闭初始化
+			$('.message .close')
+					.on('click', function() {
+						$(this)
+								.closest('.message')
+								.transition('fade');
+					});
 		</script>
 	</body>
 

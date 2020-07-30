@@ -49,13 +49,15 @@ public class CommentController {
         comment.setBlog(blogService.getBlog(blogId));
         //获取管理员信息
         User user=(User)session.getAttribute("user");
-        if (user!=null){//管理员登录，设置管理员信息
+        if (user!=null&&user.getType()==1){//管理员登录，设置管理员信息
             comment.setAvatar(user.getAvatar());
             comment.setAdminComment(true);
 //            comment.setNickname(user.getNickname());
         }else {
             //设置头像
-            comment.setAvatar(avatar);
+            comment.setAvatar(user.getAvatar());
+            comment.setNickname(user.getNickname());
+
         }
 
         //保存评论

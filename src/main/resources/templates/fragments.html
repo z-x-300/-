@@ -35,18 +35,19 @@
                     </div>
                 </form>
             </div>
-            <a href="#" th:href="@{/admin}" class="m-item item m-mobile-hide" ><img th:src="@{/images/admin.png}" style="width: 30px; padding-right: 0.5em;"></img><spa>管理员入口</spa></a>
+            <a href="#" th:href="@{/admin/index}" class="m-item item m-mobile-hide" ><img th:src="@{/images/admin.png}" style="width: 30px; padding-right: 0.5em;"></img><spa>管理员入口</spa></a>
             <div class=" m-item item m-mobile-hide menu" >
                 <div class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/images/bg.jpg"  th:src="${session.user!=null}? ${session.user.avatar}:@{/images/head.png}" alt="" class="ui avatar image" />
+                        <img src="../../static/images/bg.jpg"  th:src="${session.user!=null}? ${session.user.avatar}:@{/images/head.png}" alt="" class="ui avatar image" th:style="${session.user!=null}?'width: 30px;height: 30px;'" />
                         <span th:text="${session.user!=null}?${session.user.username}:'未登录'">未登录</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
-                        <a href="#" th:if="${session.user==null}" th:href="@{/admin/logout}" class="item">登录</a>
+                        <a href="#" th:if="${session.user==null}" th:href="@{/login}" class="item">登录</a>
                         <a href="#" th:if="${session.user==null}" th:href="@{/admin/logout}" class="item">注册</a>
-                        <a href="#" th:href="@{/admin/logout}" class="item">注销</a>
+                        <a href="#" th:if="${session.user!=null}" th:href="@{/logout}" class="item">个人中心</a>
+                        <a href="#" th:if="${session.user!=null}" th:href="@{/logout}" class="item">注销</a>
                     </div>
                 </div>
             </div>
