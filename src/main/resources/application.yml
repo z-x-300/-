@@ -5,4 +5,27 @@ spring:
   profiles:
     active: dev
 
+  #  ##根据自己的情况填写
+  #  ##邮箱服务器地址
+  #  ##QQ smtp.qq.com
+  #  ##sina smtp.sina.cn
+  #  ##aliyun smtp.aliyun.com
+  #  ##163 smtp.163.com
+  mail:
+    host: smtp.qq.com
+    ##邮箱用户名
+    username: 3030036133@qq.com
+    ##邮箱密码（注意：QQ邮箱应该使用授权码）
+    password: lfewgcmggzjideff
+    ##编码格式
+    default-encoding: utf-8
+mail:
+  fromMail:
+    ##发送邮件地址
+    sender: 3030036133@qq.com
+    ##接收邮件地址
+    receiver: 3030036133@qq.com
+
+
 comment.avatar: /images/avatar.png
+

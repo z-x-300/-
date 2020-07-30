@@ -23,4 +23,15 @@ public class UserServiceImpl implements UserService {
         User user =userRepository.findByUsernameAndPassword(username, MD5Utils.code(password));
         return user;
     }
+
+    //根据username查询用户（判断用户名是否重复）
+    @Override
+    public User findUserByUserName(String username) {
+        return userRepository.findByUsername(username);
+    }
+    //保存用户（注册使用）
+    @Override
+    public User saveUser(User user) {
+        return userRepository.save(user);
+    }
 }
