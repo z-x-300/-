@@ -3,6 +3,7 @@ package com.zhangxin.myblog.controller.admin;
 import com.zhangxin.myblog.po.Blog;
 import com.zhangxin.myblog.po.User;
 import com.zhangxin.myblog.service.BlogService;
+import com.zhangxin.myblog.service.CommentService;
 import com.zhangxin.myblog.service.TagService;
 import com.zhangxin.myblog.service.TypeService;
 import com.zhangxin.myblog.vo.BlogQuery;
@@ -42,6 +43,9 @@ public class BlogController {
 
     @Autowired
     private TagService tagService;
+
+    @Autowired
+    private CommentService commentService;
 
 
 
@@ -119,6 +123,8 @@ public class BlogController {
     //删除博客
     @GetMapping("/blogs/{id}/delete")
     public String delete(@PathVariable Long id,RedirectAttributes attributes){
+
+        commentService.deleteComment(id);
         blogService.deleteBlog(id);
         attributes.addFlashAttribute("successMessage","提示:删除成功！");
         return REDIRECT_LIST;

@@ -1,5 +1,6 @@
 package com.zhangxin.myblog.service;
 
+import com.zhangxin.myblog.po.Blog;
 import com.zhangxin.myblog.po.Comment;
 
 import java.util.List;
@@ -18,4 +19,7 @@ public interface CommentService {
 
     //获取评论总数
     Long commentCount();
+
+    //根据博客id删除评论
+   void deleteComment(Long blogId);
 }

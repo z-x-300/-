@@ -23,24 +23,24 @@
                         新用户注册
                     </div>
                 </h2>
-                <form class="ui large form" method="post" action="#" th:action="@{/register}">
+                <div class="ui large form" >
                     <div class="ui  segment">
                         <div class="field">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" name="username" placeholder="用户名">
+                                <input type="text" id="username" name="username" placeholder="用户名">
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui left icon input">
                                 <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="密码">
+                                <input type="password" id="password" name="password" placeholder="密码">
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui left icon input">
                                 <i class="lock icon"></i>
-                                <input type="password" name="confirmpassword" placeholder="确认密码">
+                                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="确认密码">
                             </div>
                         </div>
                         <div class="field">
@@ -56,15 +56,17 @@
                                 <input type="text" name="identify" id="identify" placeholder="验证码">
                             </div>
                         </div>
-                        <button class="ui fluid large teal submit button">注 册</button>
+                        <button type="button" class="ui fluid large teal submit  button" id="register-btn" >注 册</button>
                     </div>
 
                     <div class="ui error mini message"></div>
-                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">
+                    <div class="ui mini negative message" id="errormessage" style="display: none">
                         用户名和密码错误
                     </div>
-
-                </form>
+                    <div class="ui mini success message" id="successmessage" style="display: none">
+                       注册成功
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -104,7 +106,14 @@
 					type: 'email',
 					prompt: '请输入正确邮箱'
 				}]
-			}
+			},
+            identify: {
+                identifier: 'identify',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入验证码'
+                }]
+            }
         }
     });
 
@@ -144,8 +153,42 @@
 			}
 		});
 
-
 	});
+
+	$("#register-btn").click(function () {
+	    var username = $("#username").val();
+        var password = $("#password").val();
+        var confirmpassword = $("#confirmpassword").val();
+        var email = $("#email").val();
+        var identify = $("#identify").val();
+
+        $.ajax({
+            "url": "/register",    //reg是注册接口
+            type:'POST',
+            data:{"username":username,
+                "password":password,
+                "confirmpassword":confirmpassword,
+                "email":email,
+                "identify":identify},
+            success: function (result) {
+                if (result=="成功") {
+                  $("#successmessage").css("display","inline");
+                  $("#successmessage").text("你已经注册成功，请前往登录界面！");
+                  $("#errormessage").css("display","none");
+                } else {
+                    $("#errormessage").css("display","inline");
+                    $("#errormessage").text(result);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log('XMLHttpRequest:');
+                console.log(XMLHttpRequest);
+                alert('网络异常！尝试刷新网页解决问题')
+            }
+
+
+        });
+    });
 </script>
 </body>
 

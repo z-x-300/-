@@ -1,6 +1,7 @@
 package com.zhangxin.myblog.service;
 
 import com.zhangxin.myblog.dao.CommentRepository;
+import com.zhangxin.myblog.po.Blog;
 import com.zhangxin.myblog.po.Comment;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,12 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public Long commentCount() {
         return commentRepository.count();
+    }
+
+    //根据博客id删除评论
+    @Override
+    public void deleteComment(Long blogId) {
+        commentRepository.deleteByBlogId(blogId);
     }
 
     /**

@@ -170,6 +170,7 @@ public class BlogServiceImpl implements BlogService {
     @Override
     public void deleteBlog(Long id) {
         blogRepository.deleteById(id);
+
     }
 
     //获取博客浏览总数

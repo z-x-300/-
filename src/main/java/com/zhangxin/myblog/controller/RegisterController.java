@@ -86,11 +86,12 @@ public class RegisterController {
         resultMap.put("tamp", currentTime);
     }
 
+    @ResponseBody
     @PostMapping("/register")
-    public String login(@RequestParam String username, @RequestParam String password, @RequestParam String confirmpassword, @RequestParam String email,
-                        @RequestParam String identify, RedirectAttributes attributes) {
+    public String register(String username,String password,String confirmpassword, String email,
+                        String identify) {
         if (resultMap.size() ==0){
-            return "/register";
+            return "验证码生成错误，请重新发送！";
         }
 
         User user =userService.findUserByUserName(username);
@@ -103,26 +104,16 @@ public class RegisterController {
         String currentTime = sf.format(c.getTime());
         if (tamp.compareTo(currentTime) > 0) {
             String hash =  MD5Utils.code(identify);//生成MD5值
-//            if (){
-//                //校验成功
-//                attributes.addFlashAttribute("m", "恭喜！现在，你可以登录你的用户名。");
-//                return "redirect:/login";
-//            }else {
-//                //验证码不正确，校验失败
-//                System.out.println("2");
-//                attributes.addFlashAttribute("message", "验证码输入不正确");
-//                return "redirect:/register";
-//            }
 
             if (!password.equals(confirmpassword)){
-                attributes.addFlashAttribute("message", "两次密码不正确！");
-                return "redirect:/register";
+                //attributes.addFlashAttribute("message", "");
+                return "两次密码不正确！";
             }else if (!hash.equalsIgnoreCase(requestHash)){
-                attributes.addFlashAttribute("message", "验证码输入不正确！");
-                return "redirect:/register";
+                //attributes.addFlashAttribute("message", "");
+                return "验证码输入不正确！";
             }else if (user!=null){
-                attributes.addFlashAttribute("message", "该用户名已经被注册！");
-                return "redirect:/register";
+                //attributes.addFlashAttribute("message", "");
+                return "该用户名已经被注册！";
             }else {
                 //校验成功
                 User u =new User();
@@ -136,14 +127,14 @@ public class RegisterController {
                 u.setCreateTime(new Date());
                 u.setUpdateTime(new Date());
                 User user1 =userService.saveUser(u);
-                attributes.addFlashAttribute("m", "恭喜！现在，你可以登录你的用户名。");
-                return "redirect:/login";
+                //attributes.addFlashAttribute("m", "");
+                return "成功";
             }
         } else {
             // 超时
             System.out.println("3");
-            attributes.addFlashAttribute("message", "验证码已过期");
-            return "redirect:/register";
+            //attributes.addFlashAttribute("message", "验证码已过期");
+            return "验证码已过期！";
         }
 
     }
