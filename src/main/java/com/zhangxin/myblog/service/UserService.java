@@ -17,4 +17,10 @@ public interface UserService {
     //保存用户（注册使用）
     User saveUser(User user);
 
+    //修改用户信息
+    User updateUser(Long id,User user);
+
+    //根据用户id查询用户信息
+    User findUserByUserId(User user);
+
 }

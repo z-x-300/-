@@ -131,49 +131,4 @@ public class BlogController {
     }
 
 
-    //Markdown编辑器上传图片
-    @ResponseBody
-    @PostMapping(value = "/uploadfile")
-    public Map<String,Object> markdownImageUpload(@RequestParam(value = "editormd-image-file", required = false) MultipartFile file, HttpServletRequest request) {
-        Map<String,Object> resultMap = new HashMap<String,Object>();
-        String fileName=System.currentTimeMillis()+file.getOriginalFilename();
-        //保存
-        try {
-
-            File imageFolder= new File(request.getServletContext().getRealPath("/upload/images"));
-            File targetFile = new File(imageFolder,fileName);
-            if(!targetFile.getParentFile().exists())
-                targetFile.getParentFile().mkdirs();
-            file.transferTo(targetFile);
-            resultMap.put("success", 1);
-            resultMap.put("message", "上传成功！");
-            resultMap.put("url","http://127.0.0.1:8080/upload/images/"+fileName);
-        } catch (Exception e) {
-            resultMap.put("success", 0);
-            resultMap.put("message", "上传失败！");
-            e.printStackTrace();
-        }
-        System.out.println(resultMap.get("success"));
-        return resultMap;
-    }
-    //图片上传
-    @ResponseBody
-    @PostMapping("/upload")
-    public String upload(@RequestParam(value = "file", required = false) MultipartFile file,HttpServletRequest request){
-        String fileName=System.currentTimeMillis()+file.getOriginalFilename();
-        try {
-            File imageFolder= new File(request.getServletContext().getRealPath("/upload/images"));
-            File targetFile = new File(imageFolder,fileName);
-            if(!targetFile.getParentFile().exists())
-                targetFile.getParentFile().mkdirs();
-            file.transferTo(targetFile);
-           }catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        String n ="http://127.0.0.1:8080/upload/images/"+fileName;
-        return n;
-
-    }
-
 }

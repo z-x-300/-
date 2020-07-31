@@ -29,3 +29,5 @@ mail:
 
 comment.avatar: /images/avatar.png
 
+blog.upload.image.url: http://127.0.0.1:8080/upload/images/
+

@@ -50,10 +50,15 @@
                                 <input type="button" id="getcode" class="ui blue label" value="获取验证码">
                             </div>
                         </div>
-                        <div class="field">
+                        <div class="code field"  style="display:none">
                             <div class="ui left icon input">
                                 <i class="check square outline icon"></i>
                                 <input type="text" name="identify" id="identify" placeholder="验证码">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div style="text-align: left">
+                                <a href="#" th:href="@{/login}">点击登录</a>
                             </div>
                         </div>
                         <button type="button" class="ui fluid large teal submit  button" id="register-btn" >注 册</button>
