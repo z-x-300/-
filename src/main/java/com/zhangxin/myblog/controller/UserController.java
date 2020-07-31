@@ -82,6 +82,13 @@ public class UserController {
         return "personal-center";
     }
 
+    @GetMapping("/updatepassword")
+    public String uodatePassword(HttpSession session,Model model){
+        User user=(User)session.getAttribute("user");
+        model.addAttribute("user",userService.findUserByUserId(user));
+        return "updatepassword";
+    }
+
 
     //前端登录
     @PostMapping("/login")
@@ -310,5 +317,40 @@ public class UserController {
             attributes.addFlashAttribute("successMessage", "提示：操作成功！");
         }
         return "redirect:/personal";
+    }
+
+    //修改密码
+    //修改用户信息
+    @PostMapping("/updatepassword")
+    public String updatePassword(@RequestParam Long id,
+                                 @RequestParam String username,
+                                 @RequestParam String oldpassword,
+                                 @RequestParam String newpassword,
+                                 @RequestParam String confirmpassword,
+                                 HttpSession session, RedirectAttributes attributes){
+
+        User u =userService.checkUser(username,oldpassword);
+
+        if (!newpassword.equals(confirmpassword)){
+            attributes.addFlashAttribute("errorMessage", "提示：新密码和确认密码不一致！");
+            return "redirect:/updatepassword";
+        }else if (u==null){
+            attributes.addFlashAttribute("errorMessage", "提示：旧密码错误！");
+            return "redirect:/updatepassword";
+        }else {
+            User user =new User();
+            user.setPassword(MD5Utils.code(newpassword));
+            User user1 =userService.updateUser(id,user);
+            if (user1 == null) {
+                attributes.addFlashAttribute("errorMessage", "提示：操作失败！");
+                return "redirect:/updatepassword";
+            } else {
+                session.removeAttribute("user");
+                attributes.addFlashAttribute("successMessage", "提示：操作成功！");
+                return "redirect:/";
+            }
+
+        }
+
     }
 }

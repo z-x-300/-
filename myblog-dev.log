@@ -8142,3 +8142,394 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2020-07-31 17:19:00.526  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/comments/21', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CommentController.comments', args=[21, {}]}
 2020-07-31 17:19:00.548  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
 2020-07-31 17:19:00.548  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}details :: commentList
+2020-07-31 17:22:34.599  INFO 4644 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:22:34.600  INFO 4644 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/personal', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.personal', args=[org.apache.catalina.session.StandardSessionFacade@249df297, {}]}
+2020-07-31 17:22:34.659  INFO 4644 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:22:34.659  INFO 4644 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}personal-center
+2020-07-31 17:22:35.415  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:22:35.415  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:22:35.420  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:22:35.420  INFO 4644 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:32:36.230  INFO 10024 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 10024 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-31 17:32:36.232 DEBUG 10024 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-31 17:32:36.232  INFO 10024 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-31 17:32:36.263  INFO 10024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-31 17:32:36.263  INFO 10024 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-31 17:32:40.535  INFO 10024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-31 17:32:40.613  INFO 10024 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 5 JPA repository interfaces.
+2020-07-31 17:32:41.584  INFO 10024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-31 17:32:41.594  INFO 10024 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-31 17:32:41.594  INFO 10024 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-31 17:32:41.714  INFO 10024 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-31 17:32:41.715  INFO 10024 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5452 ms
+2020-07-31 17:32:41.923  INFO 10024 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-31 17:32:41.997  INFO 10024 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-31 17:32:42.084  INFO 10024 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-31 17:32:42.461  WARN 10024 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-31 17:32:42.589  INFO 10024 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-31 17:32:42.689  INFO 10024 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-31 17:32:43.458  INFO 10024 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-31 17:32:43.551  INFO 10024 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-31 17:32:45.765  INFO 10024 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-31 17:32:45.787  INFO 10024 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-31 17:32:46.311  INFO 10024 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-31 17:32:46.385  INFO 10024 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-31 17:32:46.611  INFO 10024 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-31 17:32:46.612  INFO 10024 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-31 17:32:47.327  INFO 10024 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-31 17:32:47.337  INFO 10024 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 12.306 seconds (JVM running for 13.457)
+2020-07-31 17:32:52.822  INFO 10024 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=779A9785E7D31900BCD5861532675C04] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-31 17:32:52.829  INFO 10024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-31 17:32:52.830  INFO 10024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-31 17:32:52.841  INFO 10024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-31 17:32:52.880  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:32:52.880  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:32:53.222  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:32:53.222  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:32:54.687  INFO 10024 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:32:54.688  INFO 10024 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:32:54.747  INFO 10024 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:32:54.747  INFO 10024 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:32:58.570  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:32:58.571  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:32:58.574  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:32:58.574  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:32:58.639  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:32:58.640  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@78f21d88, org.apache.catalina.connector.ResponseFacade@6ef90a5a]}
+2020-07-31 17:32:59.773  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:32:59.773  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:33:07.319  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:07.319  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 123456, org.apache.catalina.session.StandardSessionFacade@6223a364, {}, org.apache.catalina.connector.RequestFacade@78f21d88]}
+2020-07-31 17:33:07.337  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:07.337  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:33:07.352  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:07.352  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:33:07.378  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:07.378  INFO 10024 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:33:07.702  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:07.702  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:33:07.708  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:07.708  INFO 10024 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:33:10.015  INFO 10024 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:10.015  INFO 10024 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/personal', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.personal', args=[org.apache.catalina.session.StandardSessionFacade@6223a364, {}]}
+2020-07-31 17:33:10.024  INFO 10024 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:10.024  INFO 10024 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}personal-center
+2020-07-31 17:33:10.637  INFO 10024 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:10.637  INFO 10024 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:33:10.642  INFO 10024 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:10.642  INFO 10024 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:33:12.432  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:12.432  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@6223a364, {}]}
+2020-07-31 17:33:12.435  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:12.435  INFO 10024 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:33:13.881  INFO 10024 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:13.882  INFO 10024 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:33:13.886  INFO 10024 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:13.887  INFO 10024 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:33:35.862  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:35.862  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/personal', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.personal', args=[org.apache.catalina.session.StandardSessionFacade@6223a364, {}]}
+2020-07-31 17:33:35.865  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:35.865  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}personal-center
+2020-07-31 17:33:36.121  INFO 10024 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:36.121  INFO 10024 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:33:36.125  INFO 10024 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:36.125  INFO 10024 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:33:37.691  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:37.691  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@6223a364, {}]}
+2020-07-31 17:33:37.694  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:37.694  INFO 10024 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:33:37.985  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:33:37.985  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:33:37.989  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:33:37.989  INFO 10024 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:49:07.307  INFO 14388 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 14388 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-31 17:49:07.310 DEBUG 14388 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-31 17:49:07.310  INFO 14388 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-31 17:49:07.345  INFO 14388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-31 17:49:07.346  INFO 14388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-31 17:49:09.692  INFO 14388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-31 17:49:09.781  INFO 14388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 5 JPA repository interfaces.
+2020-07-31 17:49:10.614  INFO 14388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-31 17:49:10.724  INFO 14388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-31 17:49:10.724  INFO 14388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-31 17:49:10.852  INFO 14388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-31 17:49:10.852  INFO 14388 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3506 ms
+2020-07-31 17:49:11.042  INFO 14388 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-31 17:49:11.221  INFO 14388 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-31 17:49:11.310  INFO 14388 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-31 17:49:11.456  WARN 14388 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-31 17:49:11.633  INFO 14388 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-31 17:49:11.789  INFO 14388 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-31 17:49:13.040  INFO 14388 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-31 17:49:13.066  INFO 14388 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-31 17:49:16.463  INFO 14388 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-31 17:49:16.470  INFO 14388 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-31 17:49:16.883  INFO 14388 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-31 17:49:16.940  INFO 14388 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-31 17:49:17.401  INFO 14388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-31 17:49:17.402  INFO 14388 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-31 17:49:17.824  INFO 14388 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-31 17:49:17.833  INFO 14388 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 11.31 seconds (JVM running for 12.298)
+2020-07-31 17:49:24.504  INFO 14388 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=0395A58A68039C4094F067DFC285AF78] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-31 17:49:24.509  INFO 14388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-31 17:49:24.509  INFO 14388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-31 17:49:24.518  INFO 14388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-31 17:49:24.545  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:24.545  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:49:25.112  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:49:25.112  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:49:26.434  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:26.435  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:49:26.496  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:49:26.497  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:49:28.346  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:28.347  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:49:28.350  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:49:28.351  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:49:28.485  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:28.485  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@6791d72b, org.apache.catalina.connector.ResponseFacade@229355bd]}
+2020-07-31 17:49:29.449  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:49:29.450  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:49:42.194  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:42.195  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 123456, org.apache.catalina.session.StandardSessionFacade@236e473f, {}, org.apache.catalina.connector.RequestFacade@6791d72b]}
+2020-07-31 17:49:42.209  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:49:42.209  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:49:42.222  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:49:42.222  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:49:57.934  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:03.318  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:50:03.343  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:03.343  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:50:04.204  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:04.205  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:50:06.249  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:06.249  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 123456, org.apache.catalina.session.StandardSessionFacade@236e473f, {}, org.apache.catalina.connector.RequestFacade@2d2d4b11]}
+2020-07-31 17:50:06.253  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:06.253  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:50:06.273  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:06.274  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:50:06.305  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:06.305  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:50:06.909  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:06.910  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:06.916  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:06.916  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:10.204  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:10.204  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/personal', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.personal', args=[org.apache.catalina.session.StandardSessionFacade@236e473f, {}]}
+2020-07-31 17:50:10.213  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:10.213  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}personal-center
+2020-07-31 17:50:10.585  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:10.585  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:10.590  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:10.590  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:13.285  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:13.285  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@236e473f, {}]}
+2020-07-31 17:50:13.288  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:13.288  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:50:14.698  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:14.698  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:14.704  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:14.705  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:21.783  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:21.784  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.updatePassword', args=[40, user1, 1, 1, 2, org.apache.catalina.session.StandardSessionFacade@236e473f, {}]}
+2020-07-31 17:50:21.785  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:21.786  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/updatepassword
+2020-07-31 17:50:21.857  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:21.858  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@236e473f, {errorMessage=提示：新密码和确认密码不一致！}]}
+2020-07-31 17:50:21.860  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:21.861  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:50:22.634  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:22.634  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:22.639  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:22.639  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:30.661  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:30.661  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.updatePassword', args=[40, user1, 1, 1, 1, org.apache.catalina.session.StandardSessionFacade@236e473f, {}]}
+2020-07-31 17:50:30.663  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:30.663  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/updatepassword
+2020-07-31 17:50:30.667  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:30.667  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@236e473f, {errorMessage=提示：旧密码错误！}]}
+2020-07-31 17:50:30.669  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:30.669  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:50:31.074  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:31.230  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:31.235  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:31.235  INFO 14388 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:43.403  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:43.403  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.updatePassword', args=[40, user1, 123456, 1, 1, org.apache.catalina.session.StandardSessionFacade@236e473f, {}]}
+2020-07-31 17:50:43.687  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:43.687  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/updatepassword
+2020-07-31 17:50:43.691  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:43.691  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@236e473f, {successMessage=提示：操作成功！}]}
+2020-07-31 17:50:43.693  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:43.693  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:50:43.993  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:43.993  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:44.000  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:44.000  INFO 14388 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:50.847  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:50.848  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/logout', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.logout', args=[org.apache.catalina.session.StandardSessionFacade@236e473f]}
+2020-07-31 17:50:50.848  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:50.848  INFO 14388 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:50:50.873  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:50.874  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:50:50.902  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:50.902  INFO 14388 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:50:51.299  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:51.300  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:50:51.304  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:51.305  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:50:52.954  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:52.954  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:50:52.955  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:52.955  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:50:53.133  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:50:53.134  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@79518cc4, org.apache.catalina.connector.ResponseFacade@2215b2ec]}
+2020-07-31 17:50:53.155  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:50:53.155  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:51:03.947  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:03.947  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 1, org.apache.catalina.session.StandardSessionFacade@236e473f, {}, org.apache.catalina.connector.RequestFacade@79518cc4]}
+2020-07-31 17:51:03.948  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:03.948  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/login
+2020-07-31 17:51:03.952  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:03.952  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:51:03.952  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:03.952  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:51:03.985  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:03.985  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@79518cc4, org.apache.catalina.connector.ResponseFacade@2215b2ec]}
+2020-07-31 17:51:04.013  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:04.013  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:51:12.566  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:12.567  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 2, org.apache.catalina.session.StandardSessionFacade@236e473f, {}, org.apache.catalina.connector.RequestFacade@79518cc4]}
+2020-07-31 17:51:12.569  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:12.569  INFO 14388 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/login
+2020-07-31 17:51:12.573  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:12.573  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:51:12.573  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:12.574  INFO 14388 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:51:13.491  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:51:13.974  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@253a6142, org.apache.catalina.connector.ResponseFacade@47362867]}
+2020-07-31 17:51:13.981  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:51:13.981  INFO 14388 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:52:20.837  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:52:20.837  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 1, org.apache.catalina.session.StandardSessionFacade@236e473f, {}, org.apache.catalina.connector.RequestFacade@253a6142]}
+2020-07-31 17:52:20.840  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:52:20.840  INFO 14388 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:52:20.844  INFO 14388 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:52:20.844  INFO 14388 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:52:20.869  INFO 14388 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:52:20.869  INFO 14388 --- [http-nio-8080-exec-3] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:52:21.149  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:52:21.149  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:52:21.155  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:52:21.155  INFO 14388 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:53:57.821  INFO 6820 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Starting MyblogApplication on DESKTOP-OV9LBO0 with PID 6820 (F:\自学\项目\项目三\后端\myblog\target\classes started by 张 鑫 in F:\自学\项目\项目三\后端\myblog)
+2020-07-31 17:53:57.824 DEBUG 6820 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-07-31 17:53:57.825  INFO 6820 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : The following profiles are active: dev
+2020-07-31 17:53:57.868  INFO 6820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-31 17:53:57.868  INFO 6820 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-31 17:53:58.982  INFO 6820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-31 17:53:59.052  INFO 6820 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64ms. Found 5 JPA repository interfaces.
+2020-07-31 17:53:59.908  INFO 6820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-31 17:53:59.968  INFO 6820 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-31 17:53:59.968  INFO 6820 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-07-31 17:54:00.096  INFO 6820 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-31 17:54:00.096  INFO 6820 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2227 ms
+2020-07-31 17:54:00.263  INFO 6820 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-31 17:54:00.334  INFO 6820 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-31 17:54:00.421  INFO 6820 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-31 17:54:00.554  WARN 6820 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-31 17:54:00.672  INFO 6820 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-31 17:54:00.788  INFO 6820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-31 17:54:01.608  INFO 6820 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-31 17:54:01.809  INFO 6820 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-07-31 17:54:03.313  INFO 6820 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-31 17:54:03.320  INFO 6820 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-31 17:54:03.764  INFO 6820 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-31 17:54:03.789  INFO 6820 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-31 17:54:04.209  INFO 6820 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-31 17:54:04.210  INFO 6820 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-31 17:54:04.659  INFO 6820 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-31 17:54:04.667  INFO 6820 --- [restartedMain] com.zhangxin.myblog.MyblogApplication    : Started MyblogApplication in 7.253 seconds (JVM running for 7.991)
+2020-07-31 17:54:19.957  INFO 6820 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1593439067,1593783653,1593957427; JSESSIONID=9825AD9DE567F1CCF9A43A8D5BA21D39] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-07-31 17:54:19.963  INFO 6820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-31 17:54:19.963  INFO 6820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-31 17:54:19.971  INFO 6820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-31 17:54:20.000  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:20.000  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:54:20.318  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:20.318  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:54:21.036  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:21.037  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:54:21.094  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:21.094  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:54:23.812  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:23.812  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:54:23.817  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:23.817  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:54:23.882  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:23.882  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@67dc81d2, org.apache.catalina.connector.ResponseFacade@22de134d]}
+2020-07-31 17:54:25.012  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:25.012  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:54:32.306  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:32.306  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 1, org.apache.catalina.session.StandardSessionFacade@3c2e3e5c, {}, org.apache.catalina.connector.RequestFacade@67dc81d2]}
+2020-07-31 17:54:32.322  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:32.322  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:54:32.336  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:32.336  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:54:32.362  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:32.362  INFO 6820 --- [http-nio-8080-exec-7] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:54:33.678  INFO 6820 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:33.678  INFO 6820 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:54:33.683  INFO 6820 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:33.683  INFO 6820 --- [http-nio-8080-exec-8] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:54:36.348  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:36.348  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/personal', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.personal', args=[org.apache.catalina.session.StandardSessionFacade@3c2e3e5c, {}]}
+2020-07-31 17:54:36.357  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:36.357  INFO 6820 --- [http-nio-8080-exec-1] com.zhangxin.myblog.aspect.LogAspect     : Result : {}personal-center
+2020-07-31 17:54:36.717  INFO 6820 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:36.718  INFO 6820 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:54:36.722  INFO 6820 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:36.722  INFO 6820 --- [http-nio-8080-exec-10] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:54:38.154  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:38.154  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.uodatePassword', args=[org.apache.catalina.session.StandardSessionFacade@3c2e3e5c, {}]}
+2020-07-31 17:54:38.157  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:38.157  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}updatepassword
+2020-07-31 17:54:39.075  INFO 6820 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:39.076  INFO 6820 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:54:39.080  INFO 6820 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:39.080  INFO 6820 --- [http-nio-8080-exec-2] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:54:45.917  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:45.918  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/updatepassword', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.updatePassword', args=[40, user1, 1, 123456, 123456, org.apache.catalina.session.StandardSessionFacade@3c2e3e5c, {}]}
+2020-07-31 17:54:46.165  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:46.165  INFO 6820 --- [http-nio-8080-exec-9] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:54:46.176  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:46.176  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {successMessage=提示：操作成功！}]}
+2020-07-31 17:54:46.219  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:46.219  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:54:46.496  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:46.496  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:54:46.504  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:46.504  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
+2020-07-31 17:54:51.073  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:51.073  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.loginPage', args=[]}
+2020-07-31 17:54:51.073  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:51.073  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}/login
+2020-07-31 17:54:51.126  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:54:51.126  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/kaptcha', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.CodeController.getKaptchaImage', args=[org.apache.catalina.connector.RequestFacade@67dc81d2, org.apache.catalina.connector.ResponseFacade@22de134d]}
+2020-07-31 17:54:51.142  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:54:51.142  INFO 6820 --- [http-nio-8080-exec-5] com.zhangxin.myblog.aspect.LogAspect     : Result : {}null
+2020-07-31 17:55:04.400  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:55:04.400  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/login', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.UserController.login', args=[user1, 123456, org.apache.catalina.session.StandardSessionFacade@3c2e3e5c, {}, org.apache.catalina.connector.RequestFacade@67dc81d2]}
+2020-07-31 17:55:04.402  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:55:04.402  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}redirect:/
+2020-07-31 17:55:04.407  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:55:04.407  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.index', args=[Page request [number: 0, size 5, sort: updateTime: DESC], {}]}
+2020-07-31 17:55:04.426  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:55:04.427  INFO 6820 --- [http-nio-8080-exec-6] com.zhangxin.myblog.aspect.LogAspect     : Result : {}index
+2020-07-31 17:55:04.798  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doBefore-------------------
+2020-07-31 17:55:04.798  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Request:{url='http://127.0.0.1:8080/footer/blogmessage', ip='127.0.0.1', classMethod='com.zhangxin.myblog.controller.IndexController.blogMessage', args=[{}]}
+2020-07-31 17:55:04.804  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : --------------doAfter--------------------
+2020-07-31 17:55:04.804  INFO 6820 --- [http-nio-8080-exec-4] com.zhangxin.myblog.aspect.LogAspect     : Result : {}fragments :: blogMessage
